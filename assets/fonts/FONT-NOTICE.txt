@@ -1,0 +1,4 @@
+Friends Auction Display is a two-character web subset of Smiley Sans v2.0.1 by atelierAnchor.
+Source: https://github.com/atelier-anchor/smiley-sans/releases/tag/v2.0.1
+The subset contains only 拍卖 and is renamed to respect the upstream Reserved Font Names.
+Licensed under SIL OFL 1.1. See SmileySans-LICENSE.txt.

@@ -1,0 +1,201 @@
+/* Approved structure and copy remain. Personal game-design notebook treatment.
+   DESIGN_VARIANCE: 6; MOTION_INTENSITY: 2; VISUAL_DENSITY: 3.
+   Native HTML/CSS. Original-speed bot footage and a fixed teal theme. */
+@font-face {
+  font-family: "Auction Display";
+  src: url("./assets/fonts/auction-title.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+.auction-case {
+  --teal: #28514b;
+  --paper: #faf9ef;
+  --soft-paper: #dce7e0;
+  --muted: #b9d0c5;
+  --gold: #f2d078;
+  --line: rgb(219 237 225 / 24%);
+  background-color: var(--teal);
+  background-image: linear-gradient(rgb(40 81 75 / 92%), rgb(40 81 75 / 92%)), url("./assets/optimized/teal-background.webp");
+  background-size: cover;
+  background-attachment: fixed;
+}
+.auction-page { width: min(1100px, calc(100% - 96px)); padding: 24px 0 36px; }
+.case-nav { min-height: 44px; }
+.case-nav .back-link { color: var(--muted); font-size: 14px; font-weight: 400; text-decoration-color: transparent; }
+.case-nav .back-link:hover { color: var(--paper); text-decoration-color: currentColor; }
+.skip-link { position: absolute; top: 8px; left: 12px; padding: 12px 18px; background: var(--paper); color: var(--teal); transform: translateY(-180%); z-index: 1; }
+.skip-link:focus { transform: none; }
+.case-hero {
+  display: block;
+  padding: 28px 0 52px;
+}
+.case-intro {
+  display: grid;
+  grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+  grid-template-rows: 1fr auto;
+  column-gap: clamp(24px, 4vw, 56px);
+}
+.auction-page .case-intro h1 {
+  grid-column: 1;
+  grid-row: 1;
+  align-self: end;
+  margin: 0 0 12px;
+}
+.case-intro > .goal { grid-column: 1; grid-row: 2; padding-bottom: 72px; }
+.auction-host {
+  grid-column: 2;
+  grid-row: 1 / 3;
+  align-self: end;
+  justify-self: end;
+  width: min(320px, 100%);
+  margin: 0;
+}
+.auction-host img { display: block; width: 100%; height: auto; }
+.case-intro:has(.goal[open]) { grid-template-rows: auto auto; row-gap: 20px; }
+.auction-page .case-intro:has(.goal[open]) h1 { align-self: center; margin-bottom: 0; }
+.case-intro:has(.goal[open]) .auction-host { grid-row: 1; }
+.case-intro > .goal[open] { grid-column: 1 / -1; grid-row: 2; padding-bottom: 0; }
+.auction-page .case-hero .case-film { margin: 32px 0 0; }
+@media (max-width: 767px) {
+  .case-intro { column-gap: 12px; }
+  .auction-page .case-intro h1 { font-size: clamp(58px, 18vw, 100px); margin-bottom: 8px; }
+  .case-intro > .goal { padding-bottom: 40px; }
+  .auction-host { width: min(240px, 100%); }
+  .auction-page .case-hero .case-film { margin-top: 24px; }
+}
+.case-context { margin: 0 0 17px; color: var(--muted); font-size: 14px; line-height: 1.6; }
+.case-intro h1 {
+  position: relative;
+  display: flex;
+  width: fit-content;
+  gap: 0.035em;
+  margin: 0 0 29px;
+  padding: 0 0.09em 0.07em 0;
+  font-family: "Auction Display", "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: clamp(116px, 11vw, 156px);
+  font-weight: 400;
+  font-synthesis: none;
+  -webkit-text-stroke: 1px currentColor;
+  line-height: 1.1;
+}
+.case-intro h1 span:first-child { display: block; transform: rotate(-5deg) translateY(0.025em); }
+.case-intro h1 span:last-child { display: block; transform: rotate(3deg); }
+.case-intro h1::after { content: ""; position: absolute; width: 58%; height: 5px; background: var(--gold); bottom: 1px; left: 8%; transform: rotate(-4deg); }
+.case-lead { max-width: 22em; margin: 0 0 17px; font-size: 18px; line-height: 1.9; color: var(--soft-paper); text-wrap: pretty; }
+.case-lead strong { font-weight: 600; color: var(--paper); white-space: nowrap; }
+.closing-thought { display: inline-block; }
+.case-film { margin: 25px 0 0; }
+.film-video { display: block; width: 100%; height: auto; box-sizing: border-box; border: 1px solid rgb(223 239 229 / 33%); background: #101613; }
+.film-video:focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; }
+.case-film figcaption { margin-top: 13px; color: var(--muted); font-size: 13px; line-height: 1.8; }
+.case-section h2 { margin: 0; font-size: 28px; font-weight: 600; line-height: 1.45; letter-spacing: 0.01em; }
+.flow-section { padding: 27px 34px 18px; background: rgb(211 236 218 / 7%); }
+.flow-section h2 { font-size: 21px; }
+.auction-flow { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 40px; list-style: none; padding: 0; margin: 25px 0 14px; }
+.auction-flow li { position: relative; display: grid; gap: 8px; font-size: 21px; line-height: 1.5; font-weight: 500; }
+.flow-step { color: var(--muted); font-size: 13px; font-weight: 400; font-variant-numeric: tabular-nums; }
+.auction-flow li:not(:last-child)::after { content: ">"; position: absolute; right: -22px; bottom: 2px; color: var(--paper); font-size: 22px; font-weight: 400; }
+.disclosure > summary { list-style: none; cursor: pointer; }
+.disclosure > summary::-webkit-details-marker { display: none; }
+.disclosure > summary::marker { content: ""; }
+.disclosure > summary:focus-visible { outline: 2px solid var(--gold); outline-offset: 5px; }
+.text-toggle { width: fit-content; min-height: 44px; display: flex; gap: 17px; align-items: center; color: var(--gold); font-size: 14px; line-height: 1.6; }
+.text-toggle:hover { color: var(--paper); }
+.text-toggle > .toggle-label { text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 1px; text-decoration-color: rgb(242 208 120 / 55%); }
+.chevron { flex: 0 0 auto; display: inline-block; width: 22px; color: var(--paper); text-align: center; font-size: 22px; line-height: 1; }
+.disclosure[open] > summary .chevron { transform: rotate(90deg); }
+.detail-copy { color: var(--soft-paper); font-size: 16px; line-height: 1.95; text-wrap: pretty; }
+.detail-copy p { margin: 0; }
+.detail-copy p + p { margin-top: 16px; }
+.detail-copy h3 { margin: 0 0 10px; color: var(--paper); font-size: 18px; line-height: 1.5; font-weight: 600; }
+.goal .detail-copy { padding-top: 18px; }
+.rules-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 30px 48px; padding: 25px 0 18px; }
+.funds-rule { grid-column: 1 / -1; max-width: 49em; }
+.decisions-section { padding: 68px 0 58px; }
+.decisions-section h2 { margin-bottom: 22px; }
+.decision { border-bottom: 1px solid var(--line); }
+.decision:last-child { border-bottom: 0; }
+.decision > summary { display: flex; align-items: center; gap: 24px; min-height: 96px; padding: 22px 0; }
+.decision-title { flex: 1; font-size: clamp(20px, 2vw, 25px); font-weight: 500; line-height: 1.65; text-wrap: pretty; }
+.decision-consequence { display: inline-block; }
+.decision > summary:hover .decision-title, .decision[open] .decision-title { color: var(--gold); }
+.decision-copy { max-width: 47em; padding: 0 0 30px 22px; margin-bottom: 6px; border-left: 2px solid rgb(242 208 120 / 55%); }
+.revision-section { padding: 48px 0 0; border-top: 2px solid var(--line); }
+.revision-section h2 { margin-bottom: 36px; }
+.revision-layout { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.25fr); gap: 66px; }
+.revision-layout h3 { margin: 0 0 17px; color: var(--muted); font-size: 14px; font-weight: 400; line-height: 1.6; }
+.revision-layout p, .revision-changes { color: var(--soft-paper); font-size: 16px; line-height: 1.9; }
+.revision-layout p { margin: 0; }
+.revision-problem .problem-line { max-width: 9em; margin-bottom: 18px; color: var(--paper); font-size: clamp(27px, 2.9vw, 36px); line-height: 1.55; font-weight: 600; text-wrap: balance; }
+.problem-line span { display: block; }
+.revision-problem .revision-before { margin-bottom: 18px; }
+.revision-reason .detail-copy { padding-top: 14px; }
+.revision-changes { list-style: none; margin: 0; padding: 0; counter-reset: change; }
+.revision-changes li { position: relative; padding-left: 34px; counter-increment: change; }
+.revision-changes li::before { content: counter(change, decimal-leading-zero); position: absolute; top: 3px; left: 0; color: var(--muted); font-size: 12px; font-variant-numeric: tabular-nums; }
+.revision-changes li + li { margin-top: 18px; }
+.revision-changes strong { color: var(--paper); font-weight: 600; white-space: nowrap; }
+.revision-change .revision-purpose { margin-top: 24px; color: var(--muted); font-size: 14px; }
+.auction-page .contact { margin-top: 66px; padding-top: 22px; border-top-color: var(--line); }
+.auction-page .contact p { font-size: 12px; color: var(--muted); }
+.auction-page .contact a { font-size: 14px; }
+@media (prefers-reduced-motion: no-preference) {
+  .chevron { transition: transform 160ms ease; }
+  .decision-title { transition: color 160ms ease; }
+}
+@media (max-width: 1050px) {
+  .auction-page { width: calc(100% - 72px); }
+  .case-hero { gap: 38px; padding-top: 36px; }
+  .case-lead { font-size: 17px; }
+  .auction-flow { gap: 30px; }
+  .auction-flow li { font-size: 19px; }
+  .auction-flow li:not(:last-child)::after { right: -19px; }
+  .revision-layout { gap: 42px; }
+}
+@media (max-width: 767px) {
+  .auction-page { width: calc(100% - 40px); padding: 14px 0 26px; }
+  .case-hero, .revision-layout { grid-template-columns: minmax(0, 1fr); gap: 30px; }
+  .case-hero { padding: 29px 0 38px; }
+  .case-context { margin-bottom: 14px; font-size: 13px; }
+  .case-intro h1 { font-size: 112px; margin-bottom: 22px; }
+  .case-lead { max-width: 27em; font-size: 17px; margin-bottom: 13px; }
+  .case-film { margin: 0; }
+  .case-film figcaption { margin-top: 10px; font-size: 12px; }
+  .flow-section { padding: 23px 22px 16px; }
+  .flow-section h2 { font-size: 20px; }
+  .auction-flow { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 26px; margin: 24px 0 18px; }
+  .auction-flow li { gap: 6px; font-size: 19px; }
+  .auction-flow li::after { display: none; }
+  .rules-grid { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+  .funds-rule { grid-column: auto; }
+  .decisions-section { padding: 42px 0 32px; }
+  .case-section h2 { font-size: 25px; }
+  .flow-section h2 { font-size: 20px; }
+  .decisions-section h2 { margin-bottom: 12px; }
+  .decision > summary { gap: 16px; min-height: 92px; padding-block: 21px; }
+  .decision-title { font-size: 20px; }
+  .decision-copy { padding-left: 17px; padding-bottom: 20px; }
+  .revision-section { padding-top: 32px; }
+  .revision-section h2 { margin-bottom: 28px; }
+  .revision-layout { gap: 34px; }
+  .revision-problem .problem-line { max-width: none; font-size: 29px; }
+  .revision-layout h3 { margin-bottom: 12px; }
+  .auction-page .contact { margin-top: 40px; padding-top: 16px; }
+}
+@media (max-width: 360px) {
+  .case-intro h1 { font-size: 98px; }
+  .flow-section { padding-inline: 18px; }
+  .auction-flow li { font-size: 17px; }
+  .decision-title { font-size: 19px; }
+}
+@media print {
+  .auction-case { color: #222; background: #fff; }
+  .auction-page { width: 100%; }
+  .case-nav, .skip-link { display: none; }
+  .case-context, .case-lead, .case-lead strong, .detail-copy, .detail-copy h3,
+  .case-film figcaption, .auction-flow li, .decision-title, .flow-step,
+  .revision-layout h3, .revision-layout p, .revision-changes, .revision-changes strong,
+  .revision-changes li::before, .contact p, .contact a { color: #222; }
+  .case-section, .decision { border-color: #bbb; }
+}

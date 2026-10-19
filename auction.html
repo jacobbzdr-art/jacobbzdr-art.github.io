@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#28514b" />
+    <meta name="description" content="郑达仁的《朋友归朋友》拍卖设计案例：公开竞拍流程、设计思路，以及拍卖节奏调整前后的具体变化。" />
+    <title>拍卖设计案例｜朋友归朋友</title>
+    <link rel="icon" href="data:," />
+    <link rel="preload" href="./assets/fonts/auction-title.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="./styles.css?v=20261018-footer" />
+    <link rel="stylesheet" href="./auction.css?v=20261018-auctioneer" />
+    <link rel="stylesheet" href="./site-nav.css?v=20261018-directory" />
+    <script src="./site-nav.js?v=20261018-directory" defer></script>
+  </head>
+  <body class="auction-case has-site-nav" data-nav-page="auction">
+    <a class="skip-link" href="#case-content">跳到案例正文</a>
+    <aside class="site-directory">
+      <button class="directory-toggle" type="button" aria-expanded="false" aria-controls="portfolio-directory" hidden>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16" /></svg>
+        <span>目录</span>
+      </button>
+      <nav class="directory-nav" id="portfolio-directory" aria-label="作品集目录">
+        <ul>
+          <li><a class="directory-link" href="./index.html" data-nav-page="home">项目概览</a></li>
+          <li>
+            <a class="directory-link" href="./gameplay.html" data-nav-page="gameplay">玩法与流程</a>
+            <ul class="directory-children">
+              <li><a class="directory-link" href="./gameplay.html#overview" data-nav-page="gameplay" data-nav-target="overview">流程概览</a></li>
+              <li><a class="directory-link" href="./gameplay.html#activities" data-nav-page="gameplay" data-nav-target="activities">短活动</a></li>
+              <li><a class="directory-link" href="./gameplay.html#hall" data-nav-page="gameplay" data-nav-target="hall">大厅自由行动</a></li>
+              <li><a class="directory-link" href="./gameplay.html#battle" data-nav-page="gameplay" data-nav-target="battle">布阵与对战</a></li>
+            </ul>
+          </li>
+          <li>
+            <a class="directory-link" href="./auction.html" data-nav-page="auction">拍卖设计案例</a>
+            <ul class="directory-children">
+              <li><a class="directory-link" href="./auction.html#flow-title" data-nav-page="auction" data-nav-target="flow-title">竞拍流程</a></li>
+              <li><a class="directory-link" href="./auction.html#decisions-title" data-nav-page="auction" data-nav-target="decisions-title">设计思路</a></li>
+              <li><a class="directory-link" href="./auction.html#revision-title" data-nav-page="auction" data-nav-target="revision-title">节奏调整</a></li>
+            </ul>
+          </li>
+          <li>
+            <a class="directory-link" href="./income.html" data-nav-page="income">收益平衡案例</a>
+            <ul class="directory-children">
+              <li><a class="directory-link" href="./income.html#purpose" data-nav-page="income" data-nav-target="purpose">设计初衷</a></li>
+              <li><a class="directory-link" href="./income.html#adjustments" data-nav-page="income" data-nav-target="adjustments">收益调整</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    <main class="page auction-page" id="case-content">
+
+      <header class="case-hero">
+        <div class="case-intro">
+          <h1 aria-label="拍卖"><span aria-hidden="true">拍</span><span aria-hidden="true">卖</span></h1>
+          <figure class="auction-host">
+            <img src="./assets/characters/auctioneer-760.webp" srcset="./assets/characters/auctioneer-380.webp 380w, ./assets/characters/auctioneer-760.webp 760w" sizes="(max-width: 767px) 48vw, 320px" width="760" height="900" alt="游戏中的拍卖师站在拍卖台后，举着拍卖槌。" fetchpriority="high" decoding="async" />
+          </figure>
+          <details class="goal disclosure">
+            <summary class="text-toggle">
+              <span class="toggle-label">设计目标</span>
+              <span class="chevron" aria-hidden="true">&gt;</span>
+            </summary>
+            <div class="detail-copy">
+              <p>拍卖可以拿到角色、装备等东西。我想让玩家买东西的时候，也能和朋友抢一抢、互相试探，开点玩笑。</p>
+              <p>碰上正好能用的拍品，就会想买下来。可朋友也一直跟价，你又拿不准他是真的想要，还是想让你多花点钱。</p>
+              <p>比如，看到朋友很想要某件拍品，就故意加价，想让他多花点钱。结果朋友看出来了，突然不跟了，自己反而成了最后的买家。这是我想让拍卖里出现的情况。</p>
+              <p>想坑朋友，也有可能把自己坑了。每次加价，都得做好最后由自己买单的准备。我希望玩家能从这些意外里，留下一些搞笑有意思的片段。</p>
+            </div>
+          </details>
+        </div>
+
+        <figure class="case-film">
+          <video class="film-video" width="1672" height="1044" controls playsinline preload="metadata" poster="./assets/videos/auction-public-bot-poster.jpg" aria-label="公开竞拍人机演示：一星法师与强化组合，从拍品展示、互相加价到成交。">
+            <source src="./assets/videos/auction-public-bot-demo.mp4" type="video/mp4" />
+            <a href="./assets/videos/auction-public-bot-demo.mp4">打开公开竞拍演示视频</a>
+          </video>
+          <figcaption>一轮公开竞拍（人机演示）</figcaption>
+        </figure>
+      </header>
+
+      <section class="case-section flow-section" aria-labelledby="flow-title">
+        <h2 id="flow-title">一轮拍卖怎样进行</h2>
+        <ol class="auction-flow" aria-label="公开竞拍流程">
+          <li><span class="flow-step" aria-hidden="true">01</span><span>展示拍品</span></li>
+          <li><span class="flow-step" aria-hidden="true">02</span><span>自由出价</span></li>
+          <li><span class="flow-step" aria-hidden="true">03</span><span>拍卖师询价</span></li>
+          <li><span class="flow-step" aria-hidden="true">04</span><span>成交或流拍</span></li>
+        </ol>
+
+        <details class="rules disclosure">
+          <summary class="text-toggle">
+            <span class="toggle-label">完整规则</span>
+            <span class="chevron" aria-hidden="true">&gt;</span>
+          </summary>
+          <div class="rules-grid detail-copy">
+            <section aria-labelledby="preview-rule">
+              <h3 id="preview-rule">展示拍品</h3>
+              <p>开拍前先展示拍品和起拍价，留点时间让玩家看看值不值得买，然后再开始出价。</p>
+            </section>
+            <section aria-labelledby="bidding-rule">
+              <h3 id="bidding-rule">自由出价</h3>
+              <p>想参与的人都可以出价，不用按座次轮流来。</p>
+              <p>第一口报价不能低于起拍价，之后每次至少加 10 金币。可以快捷加价，也可以自己输入金额。现在最高价是多少、谁出的，玩家都能看到。</p>
+            </section>
+            <section aria-labelledby="calling-rule">
+              <h3 id="calling-rule">询价与落槌</h3>
+              <p>一段时间没人加价，拍卖师就会依次喊“第一次、第二次、最后机会”，提醒三次。</p>
+              <p>只要还没落槌，就还能加价。有了新的有效报价，会重新留出时间让其他人回应，之后再完整提醒三次。只要还有人按规则继续加价，这轮拍卖就会继续。</p>
+            </section>
+            <section aria-labelledby="sale-rule">
+              <h3 id="sale-rule">成交或流拍</h3>
+              <p>落槌后，有效报价最高的人按自己报的价格付钱，拿走拍品。公布谁买到了、花了多少钱，再开始下一轮。</p>
+              <p>如果一直没人出价，这件拍品就流拍，转到回收区。</p>
+            </section>
+            <section class="funds-rule" aria-labelledby="funds-rule">
+              <h3 id="funds-rule">资金怎样处理</h3>
+              <p>报价不能超过手头能付的现金。你的报价最高时，会先留住这笔钱，剩下的钱还能用。有人出价超过你，这笔钱就恢复可用；如果最后由你买下，成交时再扣掉。</p>
+              <p>所以就算只是想抬价，只要最后没人跟，就得按自己报的价格把东西买下来。</p>
+            </section>
+          </div>
+        </details>
+      </section>
+
+      <section class="case-section decisions-section" aria-labelledby="decisions-title">
+        <h2 id="decisions-title">我的设计思路</h2>
+        <div class="decisions">
+          <details class="decision disclosure">
+            <summary>
+              <span class="decision-title">自由加价</span>
+              <span class="chevron" aria-hidden="true">&gt;</span>
+            </summary>
+            <div class="detail-copy decision-copy">
+              <p>我保留了小额加价和自定义金额。想试试朋友还跟不跟，可以只加一点；想一下抬高价格，也可以自己输入金额。只要还有人按规则跟价，就继续拍。</p>
+              <p>这样也有问题：如果一直有人加价，这轮就会拖长，没参加的人可能等得不耐烦。目前我还是想保留朋友互相跟价的过程，具体等多久、询价多快，还要继续试玩再调。</p>
+            </div>
+          </details>
+          <details class="decision disclosure">
+            <summary>
+              <span class="decision-title">低价起拍</span>
+              <span class="chevron" aria-hidden="true">&gt;</span>
+            </summary>
+            <div class="detail-copy decision-copy">
+              <p>我想让玩家觉得，这轮拍卖值得留点钱参加。所以拍品里有同名牌组合、搭配组合，后期还会有二星牌和神秘箱。玩家可以找自己合成、搭配需要的牌，也可以试试神秘箱会开出什么。</p>
+              <p>已知拍品的起拍价设得比较低，是想让玩家愿意先出一口价。朋友也想要的时候，价格还会往上加，最后可能比原来打算的贵不少。</p>
+              <p>商店按标价买东西。拍卖则可能便宜买到正好能用的东西，但朋友也想要的话，价格就可能一路加上去，最后也不一定归你。</p>
+            </div>
+          </details>
+          <details class="decision disclosure">
+            <summary>
+              <span class="decision-title">报价失效后重选</span>
+              <span class="chevron" aria-hidden="true">&gt;</span>
+            </summary>
+            <div class="detail-copy decision-copy">
+              <p>玩家看到多少钱，就按这个总金额报价。如果朋友抢先加了价，让这次报价失效，就提示玩家重新选金额。</p>
+              <p>比如，你准备报 110，朋友先报了 110，那你这次出价就不生效，也不会自动替你改成 120。</p>
+              <p>最后要付多少钱，应该由玩家自己决定。这样做的麻烦是，玩家抢着出价时可能要重新操作一次，所以界面也要说清楚这次为什么没报上。</p>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <section class="case-section revision-section" aria-labelledby="revision-title">
+        <h2 id="revision-title">拍卖节奏调整</h2>
+        <div class="revision-layout">
+          <div class="revision-problem">
+            <h3>原来的节奏</h3>
+            <p class="problem-line"><span>有人出价后，</span><span>只留 3 秒跟价。</span></p>
+            <p class="revision-before">拍品出现后直接开始 6 秒倒计时。每次有人出价，就重新计时 3 秒；期间没人继续加价，就立刻结算并切到下一件。没有单独的看货时间，也没有三次询价。</p>
+            <details class="revision-reason disclosure">
+              <summary class="text-toggle">
+                <span class="toggle-label">我的判断</span>
+                <span class="chevron" aria-hidden="true">&gt;</span>
+              </summary>
+              <div class="detail-copy">
+                <p>看拍品和出价都挤在同一段倒计时里。别人刚报完价，玩家就得马上决定跟不跟，还要来得及完成出价操作。我觉得留给玩家反应的时间太少。</p>
+                <p>后来我查了真实拍卖现场的流程，才决定改成现在的节奏：先让玩家看拍品，再开始出价，最后由拍卖师询价、落槌。具体等几秒，再按游戏里的操作需要来安排。</p>
+              </div>
+            </details>
+          </div>
+          <div class="revision-change">
+            <h3>做出的修改</h3>
+            <ol class="revision-changes">
+              <li>开拍前<strong>展示 8 秒</strong>，让玩家先看拍品和起拍价，再进入 15 秒的自由竞价。</li>
+              <li>自由竞价倒计时结束后，拍卖师按“第一次、第二次、最后机会”<strong>询价三次，每次 3 秒</strong>，期间仍可加价。</li>
+              <li>收到新的有效报价，<strong>至少再留 10 秒</strong>让其他人回应；原本剩余时间更长就保留，随后重新走完三次询价。</li>
+              <li>普通拍品成交或流拍后，<strong>结果停留 4 秒</strong>，再展示下一件拍品。</li>
+            </ol>
+            <p class="revision-purpose">我希望玩家有时间考虑要不要跟价，也能提前知道这一轮快结束了。</p>
+          </div>
+        </div>
+      </section>
+
+      <footer class="contact" aria-label="联系郑达仁">
+        <p>郑达仁的游戏策划作品集</p>
+        <nav class="contact-links" aria-label="联系方式">
+          <a href="mailto:1305613623@qq.com">1305613623@qq.com</a>
+          <a href="tel:+8615988789973">+86 15988789973</a>
+        </nav>
+      </footer>
+    </main>
+  </body>
+</html>

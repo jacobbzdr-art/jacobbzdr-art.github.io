@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#28514b" />
+    <meta name="description" content="郑达仁的《朋友归朋友》收益平衡案例：大厅单人玩法的定位，以及老虎机、二十一点、推币机的收益调整过程。" />
+    <title>收益平衡案例｜朋友归朋友</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="./styles.css?v=20261018-footer" />
+    <link rel="stylesheet" href="./income.css?v=20261018-income-cleanup" />
+    <link rel="stylesheet" href="./site-nav.css?v=20261018-directory" />
+    <script src="./site-nav.js?v=20261018-directory" defer></script>
+  </head>
+  <body class="income-case has-site-nav" data-nav-page="income">
+    <a class="income-skip" href="#income-content">跳到案例正文</a>
+    <aside class="site-directory">
+      <button class="directory-toggle" type="button" aria-expanded="false" aria-controls="portfolio-directory" hidden>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16" /></svg>
+        <span>目录</span>
+      </button>
+      <nav class="directory-nav" id="portfolio-directory" aria-label="作品集目录">
+        <ul>
+          <li><a class="directory-link" href="./index.html" data-nav-page="home">项目概览</a></li>
+          <li>
+            <a class="directory-link" href="./gameplay.html" data-nav-page="gameplay">玩法与流程</a>
+            <ul class="directory-children">
+              <li><a class="directory-link" href="./gameplay.html#overview" data-nav-page="gameplay" data-nav-target="overview">流程概览</a></li>
+              <li><a class="directory-link" href="./gameplay.html#activities" data-nav-page="gameplay" data-nav-target="activities">短活动</a></li>
+              <li><a class="directory-link" href="./gameplay.html#hall" data-nav-page="gameplay" data-nav-target="hall">大厅自由行动</a></li>
+              <li><a class="directory-link" href="./gameplay.html#battle" data-nav-page="gameplay" data-nav-target="battle">布阵与对战</a></li>
+            </ul>
+          </li>
+          <li>
+            <a class="directory-link" href="./auction.html" data-nav-page="auction">拍卖设计案例</a>
+            <ul class="directory-children">
+              <li><a class="directory-link" href="./auction.html#flow-title" data-nav-page="auction" data-nav-target="flow-title">竞拍流程</a></li>
+              <li><a class="directory-link" href="./auction.html#decisions-title" data-nav-page="auction" data-nav-target="decisions-title">设计思路</a></li>
+              <li><a class="directory-link" href="./auction.html#revision-title" data-nav-page="auction" data-nav-target="revision-title">节奏调整</a></li>
+            </ul>
+          </li>
+          <li>
+            <a class="directory-link" href="./income.html" data-nav-page="income">收益平衡案例</a>
+            <ul class="directory-children">
+              <li><a class="directory-link" href="./income.html#purpose" data-nav-page="income" data-nav-target="purpose">设计初衷</a></li>
+              <li><a class="directory-link" href="./income.html#adjustments" data-nav-page="income" data-nav-target="adjustments">收益调整</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    <main class="page income-page" id="income-content">
+      <header class="income-intro" id="purpose">
+        <h1>大厅<span>收益平衡</span></h1>
+        <div class="income-intro-copy">
+          <p class="income-lead">我想让大厅里有很多种赚钱方式。有自己就能玩的，也有和朋友一起玩的，还有股票、拳赛这种需要等一段时间才有收益的。</p>
+          <p class="income-lead">单人玩法里，我放了二十一点、老虎机、推币机和搬水泥，希望玩家可以按自己的喜好和情况来选。</p>
+        </div>
+        <img class="income-hero-art" src="./assets/income/foreman-760.webp" srcset="./assets/income/foreman-380.webp 380w, ./assets/income/foreman-760.webp 760w" sizes="(max-width: 767px) 140px, (max-width: 1050px) 220px, 360px" width="760" height="800" alt="游戏里的包工头，戴着安全帽，身旁放着水泥袋" decoding="async" fetchpriority="high" />
+      </header>
+
+      <section class="income-purpose" aria-labelledby="problem-title">
+        <div class="income-problem">
+          <h2 id="problem-title">赚钱效率差异</h2>
+          <p>制作过程中发现，有些玩法赚得特别快，有些很慢，有些甚至很难赚到钱。我担心这样下去，玩家只会选赚钱最快的，其他玩法做了也没人愿意玩。</p>
+        </div>
+        <div class="income-roles">
+          <h2 id="roles-title">四种单人玩法</h2>
+          <p>我想让认真玩的玩家，长期收益大致接近搬水泥，同时保留每种玩法的区别。</p>
+          <dl class="role-list" aria-labelledby="roles-title">
+            <div><dt><img src="./assets/income/cement-256.webp" width="256" height="256" alt="" loading="lazy" decoding="async" /><span>搬水泥</span></dt><dd>不用本金，花时间跑一趟。</dd></div>
+            <div><dt><img src="./assets/income/slots-256.webp" width="256" height="256" alt="" loading="lazy" decoding="async" /><span>老虎机</span></dt><dd>操作简单，主要看运气，偶尔能中一笔大的。</dd></div>
+            <div><dt><img src="./assets/income/blackjack-256.webp" width="256" height="256" alt="" loading="lazy" decoding="async" /><span>二十一点</span></dt><dd>要自己判断什么时候要牌、停牌和加倍。</dd></div>
+            <div><dt><img src="./assets/income/pusher-256.webp" width="256" height="256" alt="" loading="lazy" decoding="async" /><span>推币机</span></dt><dd>观察投币口和币堆，找合适的时机投币。</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="income-section" aria-labelledby="adjustments">
+        <h2 id="adjustments">收益调整</h2>
+        <div class="income-adjustments">
+          <details class="income-detail" id="slots">
+            <summary>
+              <h3>老虎机</h3>
+              <span class="income-chevron" aria-hidden="true">&gt;</span>
+            </summary>
+            <div class="income-detail-copy">
+              <p>一开始，我想做出玩老虎机时上头的感觉：输了钱，还想再试几次赢回来。返还率当时设成了 87.5%，偶尔能中奖，但长期平均下来会亏钱。</p>
+              <p>后来我才意识到，自己只想到了玩家输钱的场面，却没想清楚他们为什么还愿意继续玩。大厅里还有其他赚钱方式，如果老虎机越玩越亏，玩家很可能就去玩别的了。</p>
+              <p>后来，我把老虎机改成了<strong>长期平均有收益，短时间内仍可能亏钱</strong>。保留输钱和中奖的起伏，让它也能成为玩家赚钱的一种选择。</p>
+              <p>我提高了返本的概率，只保留 50 和 100 两档投入，默认用 50。两档的理论平均净收益都是每次 3.5 金币；选 100 的输赢起伏更大，但平均赚的钱不会更多。</p>
+              <div class="income-table-wrap">
+                <table class="income-table">
+                  <caption>每完成一次的理论平均净收益（金币）</caption>
+                  <thead><tr><th scope="col">投入</th><th scope="col">调整前</th><th scope="col">调整后</th></tr></thead>
+                  <tbody>
+                    <tr><th scope="row">50 金币</th><td>−6.25</td><td>+3.50</td></tr>
+                    <tr><th scope="row">100 金币</th><td>−12.50</td><td>+3.50</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="income-evidence">按资金足够、每 4 秒完成一次计算，理论上平均每分钟净赚 52.5 金币。短时间内仍可能一直亏钱，这个数不代表每玩一分钟都能拿到这么多。</p>
+              <h4>保留的部分</h4>
+              <p>每次仍然独立随机，不会因为玩家钱少或连续输了就补偿。最高返还 10 倍的概率保留为 0.5%，也没有保底次数。</p>
+            </div>
+          </details>
+
+          <details class="income-detail" id="blackjack">
+            <summary>
+              <h3>二十一点</h3>
+              <span class="income-chevron" aria-hidden="true">&gt;</span>
+            </summary>
+            <div class="income-detail-copy">
+              <h4>怎么改</h4>
+              <p>我保留了原来的牌局规则，在赢的时候额外给 25 金币。平局、输掉或爆牌都没有这笔奖励。加倍时，正常输赢按加倍后的投入算，额外奖励仍然是 25。</p>
+              <p>比如投入 50 金币，普通获胜会到账 125，扣掉投入就是净赚 75。玩家还是要判断怎么打，奖励也不会随着投入一起翻倍。</p>
+              <h4>用不同打法检查收益</h4>
+              <p>为了看看操作有没有影响，我用游戏里的实际规则，分别模拟了三种打法。</p>
+              <div class="income-table-wrap">
+                <table class="income-table">
+                  <caption>每局投入 50 金币时的模拟结果</caption>
+                  <thead><tr><th scope="col">打法</th><th scope="col">平均净收益<br />（金币／分钟）</th></tr></thead>
+                  <tbody>
+                    <tr><th scope="row">根据可见牌决定要牌、停牌或加倍</th><td>+49.59</td></tr>
+                    <tr><th scope="row">不到 17 点就要牌</th><td>+32.46</td></tr>
+                    <tr><th scope="row">总是停牌</th><td>+6.34</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="income-evidence">表中每种打法模拟 20,000 局，假设每次思考 2 秒，并计入发牌和结算等待。每局补足本金，方便比较打法；这是规则模拟，还不能代表玩家带着有限的钱玩一整局的表现。</p>
+              <p>这组结果里，怎么打仍然会影响收益。投入更高也不一定赚得更多：同一种按可见牌判断的打法，投入 100 和 200 时，分别约为每分钟 46.70 和 40.92 金币。</p>
+            </div>
+          </details>
+
+          <details class="income-detail" id="pusher">
+            <summary>
+              <h3>推币机</h3>
+              <span class="income-chevron" aria-hidden="true">&gt;</span>
+            </summary>
+            <div class="income-detail-copy">
+              <h4>一开始很难赚到钱</h4>
+              <p>原来投一次要 20 金币，出口有坡。按投币口到中间再投的方式，连续测试 4 分钟，最后净亏 1,260 金币，中央的币塔也没有推下来。</p>
+              <h4>先让币能被推下来</h4>
+              <p>我把出口改平，加宽承币面和出口，补齐靠近推板的币堆，也减轻了币塔的重量和摩擦。硬币仍然要从正面出口掉下来才会到账，从侧面掉下去就损失了。</p>
+              <p>这时先试了每次投入 10 金币。掉币改善后又赚得太快，所以最后改成每次 15，普通币仍返还 20，特殊币返还 100。</p>
+              <div class="income-table-wrap">
+                <table class="income-table">
+                  <caption>同样在投币口到中间时投币</caption>
+                  <thead><tr><th scope="col">版本</th><th scope="col">投币时间</th><th scope="col">净收益<br />（金币）</th></tr></thead>
+                  <tbody>
+                    <tr><th scope="row">原来：20 金币，有坡出口</th><td>4 分钟</td><td>−1,260</td></tr>
+                    <tr><th scope="row">尝试：10 金币，改平出口等调整</th><td>10 分钟</td><td>+2,110</td></tr>
+                    <tr><th scope="row">采用：15 金币，保留物理调整</th><td>10 分钟</td><td>+830</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="income-evidence">每次停止投币后，都再等 12 秒统计落币。旧版和新版的测试时长不同；出口、币堆和成本也一起改过，不能把改善全算在出口改平这一项上。</p>
+              <h4>保留观察和操作的区别</h4>
+              <p>最后的 15 金币版本，中间再投的那次测试，10 分钟净赚 830；不看位置连续投的那次，净亏 1,610。</p>
+              <p>我接受不看时机就一直投会亏钱。这个玩法本来就想让玩家认真观察再投，不打算通过暗中补钱，保证每个人都能赚到。</p>
+              <p class="income-evidence">这些是调用游戏实际物理的自动操作测试，每种打法只有一次长测。中间再投的那次，前 3 分钟也还亏了 245 金币，不能用 10 分钟的结果保证短时间收益。</p>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <footer class="contact" aria-label="联系郑达仁">
+        <p>郑达仁的游戏策划作品集</p>
+        <nav class="contact-links" aria-label="联系方式">
+          <a href="mailto:1305613623@qq.com">1305613623@qq.com</a>
+          <a href="tel:+8615988789973">+86 15988789973</a>
+        </nav>
+      </footer>
+    </main>
+  </body>
+</html>

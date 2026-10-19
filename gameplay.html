@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#294946" />
+    <meta name="description" content="了解《朋友归朋友》的短活动、大厅自由行动，以及布阵与对战流程。" />
+    <title>玩法与流程｜朋友归朋友</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="./styles.css?v=20261018-footer" />
+    <link rel="stylesheet" href="./gameplay.css?v=20261018-toggle-labels" />
+    <script src="./gameplay.js?v=20261018-directory" defer></script>
+    <link rel="stylesheet" href="./site-nav.css?v=20261018-directory" />
+    <script src="./site-nav.js?v=20261018-directory" defer></script>
+  </head>
+  <body class="has-site-nav" data-nav-page="gameplay">
+    <a class="flow-skip-link" href="#play-examples">跳到玩法片段</a>
+    <aside class="site-directory">
+      <button class="directory-toggle" type="button" aria-expanded="false" aria-controls="portfolio-directory" hidden>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16" /></svg>
+        <span>目录</span>
+      </button>
+      <nav class="directory-nav" id="portfolio-directory" aria-label="作品集目录">
+        <ul>
+          <li><a class="directory-link" href="./index.html" data-nav-page="home">项目概览</a></li>
+          <li>
+            <a class="directory-link" href="./gameplay.html" data-nav-page="gameplay">玩法与流程</a>
+            <ul class="directory-children">
+              <li><a class="directory-link" href="./gameplay.html#overview" data-nav-page="gameplay" data-nav-target="overview">流程概览</a></li>
+              <li><a class="directory-link" href="./gameplay.html#activities" data-nav-page="gameplay" data-nav-target="activities">短活动</a></li>
+              <li><a class="directory-link" href="./gameplay.html#hall" data-nav-page="gameplay" data-nav-target="hall">大厅自由行动</a></li>
+              <li><a class="directory-link" href="./gameplay.html#battle" data-nav-page="gameplay" data-nav-target="battle">布阵与对战</a></li>
+            </ul>
+          </li>
+          <li>
+            <a class="directory-link" href="./auction.html" data-nav-page="auction">拍卖设计案例</a>
+            <ul class="directory-children">
+              <li><a class="directory-link" href="./auction.html#flow-title" data-nav-page="auction" data-nav-target="flow-title">竞拍流程</a></li>
+              <li><a class="directory-link" href="./auction.html#decisions-title" data-nav-page="auction" data-nav-target="decisions-title">设计思路</a></li>
+              <li><a class="directory-link" href="./auction.html#revision-title" data-nav-page="auction" data-nav-target="revision-title">节奏调整</a></li>
+            </ul>
+          </li>
+          <li>
+            <a class="directory-link" href="./income.html" data-nav-page="income">收益平衡案例</a>
+            <ul class="directory-children">
+              <li><a class="directory-link" href="./income.html#purpose" data-nav-page="income" data-nav-target="purpose">设计初衷</a></li>
+              <li><a class="directory-link" href="./income.html#adjustments" data-nav-page="income" data-nav-target="adjustments">收益调整</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    <main class="page gameplay-page">
+
+      <header class="flow-intro">
+        <h1>玩法<span>与流程</span></h1>
+      </header>
+
+      <section class="daily-overview" aria-label="整局流程">
+        <ol class="daily-flow" aria-label="每天的游戏流程">
+          <li><strong>短活动</strong></li>
+          <li><strong>大厅自由行动</strong></li>
+          <li><strong>布阵与对战</strong></li>
+          <li><strong>每日结算</strong></li>
+        </ol>
+      </section>
+
+      <figure class="gameplay-film overview-film" id="overview" aria-label="游戏流程概览">
+        <video class="gameplay-video" id="overview-video" width="1920" height="1200" controls playsinline preload="metadata"
+          poster="./assets/videos/friends-game-overview-v2-poster.jpg?v=20261018-clean"
+          aria-label="朋友归朋友一分钟流程概览：短活动争抢金币，大厅竞拍，布阵与三路对战，再到每日结算。">
+          <source src="./assets/videos/friends-game-overview-v2.mp4?v=20261018-clean" type="video/mp4" />
+          <a href="./assets/videos/friends-game-overview-v2.mp4?v=20261018-clean">打开一分钟流程概览</a>
+        </video>
+      </figure>
+
+      <section class="play-examples" id="play-examples" aria-labelledby="examples-title">
+        <h2 id="examples-title">玩法片段</h2>
+        <div class="featured-list">
+          <details class="featured-case" id="activities">
+            <summary>
+              <div class="case-teaser">
+                <h3 id="activity-title">短活动 <span>跑酷夺筹</span></h3>
+                <span class="case-action"><span class="when-closed">看实机与设计</span><span class="when-open">收起内容</span></span>
+              </div>
+              <img class="case-preview" src="./assets/videos/parkour-bot-poster.jpg" width="1672" height="1044" alt="" loading="lazy" />
+              <span class="disclosure-arrow" aria-hidden="true">&gt;</span>
+            </summary>
+            <div class="case-body">
+              <figure class="gameplay-film">
+                <video class="gameplay-video" id="parkour-video" width="1672" height="1044" controls playsinline preload="none" poster="./assets/videos/parkour-bot-poster.jpg"
+                  aria-label="跑酷夺筹人机演示：争抢金币、路线跳跃到奖励结算。">
+                  <source src="./assets/videos/parkour-bot-demo.mp4" type="video/mp4" />
+                  <a href="./assets/videos/parkour-bot-demo.mp4">打开跑酷夺筹演示视频</a>
+                </video>
+                <figcaption>跑酷夺筹（人机演示）</figcaption>
+                <p class="video-credit">注：短活动灵感来自 <a href="https://store.steampowered.com/app/880940/Pummel_Party/" target="_blank" rel="noopener noreferrer" aria-label="Pummel Party 的 Steam 商店页面（新标签页打开）">Pummel Party</a>。</p>
+              </figure>
+              <div class="case-copy">
+                <section aria-labelledby="parkour-rules-title">
+                  <h4 id="parkour-rules-title">玩法</h4>
+                  <p>场上一次只有<strong>一枚金币</strong>，被拿到后才会换位置。玩家可以选不同的路线过去抢，也可以通过推人干扰朋友拿金币。</p>
+                </section>
+                <section aria-labelledby="parkour-design-title">
+                  <h4 id="parkour-design-title">设计思路</h4>
+                  <p>地图里放了推车、弹簧床和跷跷板。推车的两端分别提供不同路线的登高捷径，玩家可以看金币刷在哪里，再决定走哪条路、用哪个机关。</p>
+                  <p>玩家的目标都是拿金币。我想让过去抢金币的方式多一些，抢的过程中也能互相推一推，留下一些搞笑有意思的片段。</p>
+                </section>
+              </div>
+            </div>
+            <details class="other-games">
+              <summary>
+                <span><strong>其他短活动</strong><span class="other-game-names">岩浆推人、碰碰停车场、自由死斗</span></span>
+                <span class="disclosure-arrow" aria-hidden="true">&gt;</span>
+              </summary>
+              <div class="other-game-list">
+                <article class="other-game" aria-labelledby="other-activity-0">
+                  <h5 id="other-activity-0">岩浆推人</h5>
+                  <p>一边想办法把朋友推下去，一边留意脚下快要塌掉的岩台。掉进岩浆，这一回合就淘汰了。</p>
+                  <p><strong>设计思路：</strong>推空后的收手时间比推中更长。朋友推空了，你就有机会把他推下去。</p>
+                </article>
+                <article class="other-game" aria-labelledby="other-activity-1">
+                  <h5 id="other-activity-1">碰碰停车场</h5>
+                  <p>玩家开车抢亮起的车位，也能互相碰撞。倒计时结束时，按车身占住车位的面积判断车位算谁的，一共六轮，累计得分。</p>
+                  <p><strong>设计思路：</strong>车位有高分和普通两种。是去抢高分，还是先找一个没那么挤的车位，玩家可以自己选。先停进去也还要小心，朋友可能最后一刻撞过来。</p>
+                </article>
+                <article class="other-game" aria-labelledby="other-activity-2">
+                  <h5 id="other-activity-2">自由死斗</h5>
+                  <p>两分钟内比谁击杀得多，倒下后两秒就能复活。可以借着掩体和侧路接近对手，也能随时切换已经有的武器。</p>
+                  <p><strong>设计思路：</strong>手枪和近战武器免费，步枪和狙击枪要在大厅买，死亡后不会掉落。我想让大厅里买不买枪的决定，也能影响接下来和朋友玩的短活动。</p>
+                </article>
+              </div>
+            </details>
+          </details>
+
+          <details class="featured-case" id="hall">
+            <summary>
+              <div class="case-teaser">
+                <h3 id="hall-title">大厅自由行动 <span>拍卖</span></h3>
+                <span class="case-action"><span class="when-closed">看实机与设计</span><span class="when-open">收起内容</span></span>
+              </div>
+              <img class="case-preview" src="./assets/videos/auction-public-bot-poster.jpg" width="1672" height="1044" alt="" loading="lazy" />
+              <span class="disclosure-arrow" aria-hidden="true">&gt;</span>
+            </summary>
+            <div class="case-body">
+              <figure class="gameplay-film">
+                <video class="gameplay-video" id="auction-video" width="1672" height="1044" controls playsinline preload="none" poster="./assets/videos/auction-public-bot-poster.jpg"
+                  aria-label="公开竞拍人机演示：一星法师与强化组合，从拍品展示、互相加价到成交。">
+                  <source src="./assets/videos/auction-public-bot-demo.mp4" type="video/mp4" />
+                  <a href="./assets/videos/auction-public-bot-demo.mp4">打开公开竞拍演示视频</a>
+                </video>
+                <figcaption>一轮公开竞拍（人机演示）</figcaption>
+              </figure>
+              <div class="case-copy">
+                <section aria-labelledby="hall-purpose-title">
+                  <h4 id="hall-purpose-title">在大厅做准备</h4>
+                  <p>短活动结束后，玩家回到大厅各自找点事做。可以玩几局、买点东西，也能凑过去看朋友在干什么，顺便整蛊一下。</p>
+                  <p>拍卖会先展示拍品和起拍价，想买的人就可以参与竞价。落槌前都能加价，最后由有效报价最高的人付款，拿走拍品。</p>
+                </section>
+                <section aria-labelledby="auction-design-title">
+                  <h4 id="auction-design-title">拍卖和商店有什么不同</h4>
+                  <p>商店按标价买东西。拍卖则可能便宜买到正好能用的东西，但朋友也想要的话，价格就可能一路加上去，最后也不一定归你。</p>
+                </section>
+              </div>
+            </div>
+            <details class="other-games">
+              <summary>
+                <span><strong>其他大厅玩法</strong><span class="other-game-names">二十一点、老虎机、商店</span></span>
+                <span class="disclosure-arrow" aria-hidden="true">&gt;</span>
+              </summary>
+              <div class="other-game-list">
+                <article class="other-game" aria-labelledby="other-hall-0">
+                  <h5 id="other-hall-0">二十一点</h5>
+                  <p>和庄家比点数，不能超过 21 点。过程中可以要牌、停牌或加倍。赢到的钱可以留着买东西，也可以接着玩。</p>
+                  <p><strong>设计思路：</strong>打牌的操作放在场景里，站在牌桌旁也能转头、走动。我想让玩家打牌时还能看看朋友在干什么，围观、聊几句。</p>
+                </article>
+                <article class="other-game" aria-labelledby="other-hall-1">
+                  <h5 id="other-hall-1">老虎机</h5>
+                  <p>先选这次投多少钱，再等转轮一个个停下。能拿回多少，要看最后的图案，也可能什么都拿不到。</p>
+                  <p><strong>设计思路：</strong>我想让玩家自己选愿意冒多大的风险，也能和朋友一起等开奖。</p>
+                </article>
+                <article class="other-game" aria-labelledby="other-hall-2">
+                  <h5 id="other-hall-2">商店</h5>
+                  <p>在点单机上选好战斗牌、装备或用品，付钱后拿到发票，再交给店员领东西。买来的东西可以用来布阵、参加短活动，也可以拿去整蛊朋友。</p>
+                  <p><strong>设计思路：</strong>商店每天卖的东西会随机变化。玩家得看今天有什么，再想这笔钱是用来补强阵容、买整蛊道具，还是留着参加拍卖。</p>
+                </article>
+              </div>
+            </details>
+          </details>
+
+          <details class="featured-case" id="battle">
+            <summary>
+              <div class="case-teaser">
+                <h3 id="battle-title">布阵与对战</h3>
+                <span class="case-action"><span class="when-closed">看实机与设计</span><span class="when-open">收起内容</span></span>
+              </div>
+              <img class="case-preview" src="./assets/videos/formation-battle-bot-poster.jpg" width="1672" height="1044" alt="" loading="lazy" />
+              <span class="disclosure-arrow" aria-hidden="true">&gt;</span>
+            </summary>
+            <div class="case-body">
+              <figure class="gameplay-film">
+                <video class="gameplay-video" id="battle-video" width="1672" height="1044" controls playsinline preload="none" poster="./assets/videos/formation-battle-bot-poster.jpg"
+                  aria-label="布阵与对战人机演示：放置战斗牌、配置装备、逐路交锋到积分结算，本轮未使用战术牌。">
+                  <source src="./assets/videos/formation-battle-bot-demo.mp4" type="video/mp4" />
+                  <a href="./assets/videos/formation-battle-bot-demo.mp4">打开布阵与对战演示视频</a>
+                </video>
+                <figcaption>一轮布阵与对战（人机演示，本轮未使用战术牌）</figcaption>
+              </figure>
+              <div class="case-copy">
+                <section aria-labelledby="battle-rules-title">
+                  <h4 id="battle-rules-title">玩法</h4>
+                  <p>把在大厅拿到的战斗牌和装备分到<strong>三条路线</strong>。玩家先看到彼此的阵容，再各自秘密选择战术。揭晓后逐路对战，按胜负拿积分。</p>
+                </section>
+                <section aria-labelledby="battle-design-title">
+                  <h4 id="battle-design-title">设计思路</h4>
+                  <p>玩家可以根据朋友的阵容猜他会怎么选，但要等揭晓才知道。我想让这里有猜中朋友的高兴，也有以为自己猜对了，结果被朋友反过来坑了的情况。</p>
+                </section>
+              </div>
+            </div>
+          </details>
+        </div>
+      </section>
+      <footer class="contact" aria-label="联系郑达仁">
+        <p>郑达仁的游戏策划作品集</p>
+        <nav class="contact-links" aria-label="联系方式">
+          <a href="mailto:1305613623@qq.com">1305613623@qq.com</a>
+          <a href="tel:+8615988789973">+86 15988789973</a>
+        </nav>
+      </footer>
+    </main>
+  </body>
+</html>

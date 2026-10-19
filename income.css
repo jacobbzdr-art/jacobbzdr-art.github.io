@@ -1,0 +1,112 @@
+/* Income case: extend the existing teal reading pages and native disclosures. */
+.income-case {
+  --teal: #28514b;
+  --paper: #faf9ef;
+  --soft-paper: #dce7e0;
+  --muted: #b9d0c5;
+  --gold: #f2d078;
+  --line: rgb(219 237 225 / 24%);
+  background-color: var(--teal);
+  background-image: linear-gradient(rgb(40 81 75 / 92%), rgb(40 81 75 / 92%)), url("./assets/optimized/teal-background.webp");
+  background-size: cover;
+  background-attachment: fixed;
+  scrollbar-color: var(--muted) var(--teal);
+}
+.income-case ::selection { color: var(--teal); background: var(--gold); }
+.income-page { padding: 60px 0 36px; }
+.income-page p { margin: 0; font-size: 17px; line-height: 1.95; color: var(--soft-paper); text-wrap: pretty; }
+.income-page p + p { margin-top: 14px; }
+.income-page h1 { width: auto; margin: 0 0 30px; font-size: clamp(40px, 5.4vw, 72px); font-weight: 600; line-height: 1.3; letter-spacing: .01em; text-wrap: balance; }
+.income-page h1 span { color: var(--gold); }
+.income-page h2 { margin: 0 0 20px; font-size: 28px; line-height: 1.45; font-weight: 600; text-wrap: balance; }
+.income-page h3 { margin: 0 0 14px; font-size: 20px; line-height: 1.5; font-weight: 500; }
+.income-page h4 { margin: 30px 0 10px; color: var(--paper); font-size: 18px; line-height: 1.5; font-weight: 600; }
+.income-page strong { color: var(--paper); font-weight: 600; }
+.income-intro { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, .54fr); grid-template-areas: "title art" "copy art"; gap: 22px 28px; align-items: center; padding-bottom: 42px; }
+.income-intro h1 { grid-area: title; margin: 0; align-self: end; }
+.income-intro-copy { grid-area: copy; align-self: start; }
+.income-hero-art { grid-area: art; display: block; justify-self: end; width: min(100%, 360px); height: auto; pointer-events: none; }
+.income-page .income-lead { font-size: 19px; }
+.income-purpose { padding-top: 36px; border-top: 1px solid var(--line); }
+.income-problem { display: grid; grid-template-columns: minmax(200px, .7fr) minmax(0, 1.5fr); gap: 36px; align-items: start; }
+.income-problem h2 { font-size: 25px; margin: 3px 0 0; }
+.income-roles { margin-top: 44px; }
+.income-roles > p { max-width: 44em; }
+.role-list { margin: 24px 0 0; padding: 0; }
+.role-list > div { display: grid; grid-template-columns: 230px minmax(0, 1fr); gap: 24px; align-items: center; padding: 12px 0; border-top: 1px solid var(--line); }
+.role-list dt { display: flex; align-items: center; gap: 22px; color: var(--paper); font-size: 20px; font-weight: 500; line-height: 1.7; }
+.role-list dt img { display: block; flex: none; width: 84px; height: 84px; object-fit: contain; pointer-events: none; }
+.role-list dd { margin: 0; color: var(--soft-paper); font-size: 17px; line-height: 1.9; }
+.income-section { padding-top: 54px; }
+.income-adjustments { border-top: 1px solid var(--line); }
+.income-detail { border-bottom: 1px solid var(--line); }
+.income-detail:last-child { border-bottom: 0; }
+.income-detail > summary { display: grid; grid-template-columns: minmax(0, 1fr) 24px; align-items: center; gap: 24px; min-height: 100px; padding: 24px 0; cursor: pointer; list-style: none; }
+.income-detail > summary::-webkit-details-marker { display: none; }
+.income-detail > summary::marker { content: ""; }
+.income-detail > summary h3 { margin: 0; font-size: 25px; line-height: 1.5; font-weight: 500; }
+.income-chevron { display: block; width: 24px; color: var(--paper); font-size: 25px; line-height: 1; text-align: center; }
+.income-detail[open] > summary .income-chevron { transform: rotate(90deg); }
+.income-detail > summary:hover h3, .income-detail[open] > summary h3 { color: var(--gold); }
+.income-detail > summary:focus-visible { outline: 2px solid var(--gold); outline-offset: 5px; }
+.income-detail-copy { max-width: 760px; padding: 0 0 32px; }
+.income-detail-copy h4:first-child { margin-top: 0; }
+.income-table-wrap { max-width: 100%; margin-top: 22px; }
+.income-table { width: 100%; border-collapse: collapse; color: var(--soft-paper); font-size: 15px; line-height: 1.7; font-variant-numeric: tabular-nums; }
+.income-table caption { margin-bottom: 12px; text-align: left; color: var(--paper); font-size: 16px; font-weight: 500; }
+.income-table th, .income-table td { padding: 14px 16px; border-bottom: 1px solid var(--line); vertical-align: top; text-align: right; }
+.income-table th:first-child { padding-left: 0; text-align: left; }
+.income-table th:last-child, .income-table td:last-child { padding-right: 0; }
+.income-table thead th { border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; font-weight: 400; }
+.income-table tbody th { font-weight: 400; }
+.income-table td { white-space: nowrap; }
+.income-table td:last-child { color: var(--paper); }
+.income-page .income-evidence { margin-top: 14px; color: var(--muted); font-size: 14px; line-height: 1.9; }
+.income-page .contact { margin-top: 54px; border-top-color: var(--line); }
+.income-page .contact p { font-size: 12px; color: var(--muted); }
+.income-page .contact a { font-size: 14px; }
+.income-skip { position: absolute; top: 8px; left: 12px; padding: 12px 18px; background: var(--paper); color: var(--teal); transform: translateY(-180%); z-index: 30; }
+.income-skip:focus { transform: none; outline: 2px solid var(--gold); }
+@container portfolio (max-width: 760px) {
+  .income-problem { display: block; }
+  .income-problem h2 { margin-bottom: 16px; }
+  .income-intro { padding-bottom: 32px; gap: 20px 20px; }
+  .income-intro .income-lead { font-size: 18px; }
+  .income-roles { margin-top: 36px; }
+  .role-list > div { grid-template-columns: 190px minmax(0, 1fr); gap: 20px; }
+  .role-list dt { gap: 16px; font-size: 19px; }
+  .role-list dt img { width: 68px; height: 68px; }
+  .income-detail > summary { gap: 20px; }
+}
+@media (max-width: 767px) {
+  .income-page { padding-top: 36px; }
+  .income-page h1 { font-size: clamp(32px, 9.6vw, 56px); margin-bottom: 24px; }
+  .income-intro { grid-template-columns: minmax(0, 1fr) 140px; grid-template-areas: "title art" "copy copy"; gap: 20px 16px; }
+  .income-intro h1 { margin: 0; align-self: center; }
+  .income-intro h1 span { display: block; }
+  .income-hero-art { width: 140px; }
+  .income-page h2 { font-size: 25px; margin-bottom: 16px; }
+  .income-page .income-lead { font-size: 17px; }
+  .income-page p { font-size: 16px; line-height: 1.9; }
+  .income-purpose { padding-top: 28px; }
+  .income-section { padding-top: 40px; }
+  .role-list > div { grid-template-columns: 76px minmax(0, 1fr); gap: 20px; padding: 16px 0; }
+  .role-list dt { flex-direction: column; gap: 6px; font-size: 17px; text-align: center; }
+  .role-list dt img { width: 64px; height: 64px; }
+  .role-list dd { font-size: 16px; }
+  .income-detail > summary { gap: 16px; min-height: 84px; }
+  .income-detail > summary h3 { font-size: 23px; }
+  .income-table { font-size: 14px; }
+  .income-table th, .income-table td { padding: 12px 10px; }
+  .income-table thead th { font-size: 13px; }
+  .income-page .income-evidence { font-size: 13px; }
+  .income-page .contact { margin-top: 40px; }
+}
+@media (max-width: 359px) {
+  .income-intro { grid-template-columns: minmax(0, 1fr) 110px; gap: 18px 10px; }
+  .income-hero-art { width: 110px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .income-chevron { transition: transform 160ms ease-out; }
+  .income-detail > summary h3 { transition: color 160ms ease-out; }
+}
