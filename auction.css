@@ -138,6 +138,10 @@
 .revision-changes li + li { margin-top: 18px; }
 .revision-changes strong { color: var(--paper); font-weight: 600; white-space: nowrap; }
 .revision-change .revision-purpose { margin-top: 24px; color: var(--muted); font-size: 14px; }
+.reference-note { margin: 24px 0 0; color: var(--muted); font-size: 13px; line-height: 1.8; text-wrap: pretty; }
+.reference-note a { color: var(--gold); text-underline-offset: 4px; }
+.reference-note a:hover { color: var(--paper); }
+.reference-note a:focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; }
 .auction-page .contact { margin-top: 66px; padding-top: 22px; border-top-color: var(--line); }
 .auction-page .contact p { font-size: 12px; color: var(--muted); }
 .auction-page .contact a { font-size: 14px; }
@@ -197,6 +201,6 @@
   .case-context, .case-lead, .case-lead strong, .detail-copy, .detail-copy h3,
   .case-film figcaption, .auction-flow li, .decision-title, .flow-step,
   .revision-layout h3, .revision-layout p, .revision-changes, .revision-changes strong,
-  .revision-changes li::before, .contact p, .contact a { color: #222; }
+  .revision-changes li::before, .reference-note, .reference-note a, .contact p, .contact a { color: #222; }
   .case-section, .decision { border-color: #bbb; }
 }
