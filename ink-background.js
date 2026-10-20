@@ -6,16 +6,9 @@
   canvas.hidden = true;
   canvas.setAttribute('aria-hidden', 'true');
   document.body.prepend(canvas);
-  const button = document.createElement('button');
-  button.type = 'button';
-  button.className = 'background-motion-toggle';
-  button.hidden = true;
-  (document.querySelector('.directory-nav') || document.querySelector('footer') || document.body).append(button);
   const motion = matchMedia('(prefers-reduced-motion: reduce)');
   const ctx = canvas.getContext('2d', { alpha: false });
-  let userPaused = false;
-  try { userPaused = localStorage.getItem('portfolio-background-paused') === 'true'; } catch (_) {}
-  let paused = motion.matches || userPaused;
+  let paused = motion.matches;
   let worker, frame = 0, busy = false, dirty = true, lastTick = 0, submitted = 0;
   let elapsed = 24, version = 0, renderWidth = 0, renderHeight = 0, interval = 50;
   let activeVideo = false, zones = [], layoutDirty = false;
@@ -82,16 +75,9 @@
     if (worker && !document.hidden) frame = requestAnimationFrame(requestFrame);
   }
   function sync() {
-    button.textContent = paused ? '播放背景动效' : '暂停背景动效';
     canvas.dataset.paused = String(paused);
     kick();
   }
-  button.addEventListener('click', () => {
-    paused = !paused;
-    userPaused = paused;
-    try { localStorage.setItem('portfolio-background-paused', String(paused)); } catch (_) {}
-    sync();
-  });
   function fail() {
     if (worker) worker.terminate();
     worker = null;
@@ -99,7 +85,6 @@
     cancelAnimationFrame(frame);
     frame = 0;
     canvas.hidden = true;
-    button.hidden = true;
     document.body.classList.remove('ink-active');
   }
   try {
@@ -114,7 +99,6 @@
         }
         ctx.putImageData(new ImageData(new Uint8ClampedArray(data.bytes), data.width, data.height), 0, 0);
         canvas.hidden = false;
-        button.hidden = false;
         document.body.classList.add('ink-active');
         canvas.dataset.time = data.time.toFixed(3);
         canvas.dataset.rendered = 'true';
@@ -133,7 +117,7 @@
     if (document.hidden) { cancelAnimationFrame(frame); frame = 0; }
     else scheduleLayout();
   });
-  motion.addEventListener('change', e => { paused = e.matches || userPaused; sync(); });
+  motion.addEventListener('change', e => { paused = e.matches; sync(); });
   const videos = [...document.querySelectorAll('video')];
   function checkVideos() { activeVideo = videos.some(v => !v.paused && !v.ended); kick(); }
   for (const video of videos) for (const event of ['play', 'pause', 'ended']) video.addEventListener(event, checkVideos);
