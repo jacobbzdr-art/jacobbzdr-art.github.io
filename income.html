@@ -8,7 +8,7 @@
     <title>收益平衡案例｜朋友归朋友</title>
     <link rel="icon" href="data:," />
     <link rel="stylesheet" href="./styles.css?v=20261018-footer" />
-    <link rel="stylesheet" href="./income.css?v=20261018-income-cleanup" />
+    <link rel="stylesheet" href="./income.css?v=20261020-reading" />
     <link rel="stylesheet" href="./site-nav.css?v=20261018-directory" />
     <script src="./site-nav.js?v=20261018-directory" defer></script>
     <link rel="stylesheet" href="./ink-background.css?v=20261020-v4" />
@@ -52,20 +52,19 @@
       </nav>
     </aside>
     <main class="page income-page" id="income-content">
-      <header class="income-intro" id="purpose">
+      <header class="income-intro">
         <h1>大厅<span>收益平衡</span></h1>
         <div class="income-intro-copy">
-          <p class="income-lead">我想让大厅里有很多种赚钱方式。有自己就能玩的，也有和朋友一起玩的，还有股票、拳赛这种需要等一段时间才有收益的。</p>
-          <p class="income-lead">单人玩法里，我放了二十一点、老虎机、推币机和搬水泥，希望玩家可以按自己的喜好和情况来选。</p>
+          <h2 id="problem-title">赚钱效率差异</h2>
+          <p class="income-lead">制作过程中发现，有些玩法赚得特别快，有些很慢，有些甚至很难赚到钱。我担心这样下去，玩家只会选赚钱最快的，其他玩法做了也没人愿意玩。</p>
         </div>
         <img class="income-hero-art" src="./assets/income/foreman-760.webp" srcset="./assets/income/foreman-380.webp 380w, ./assets/income/foreman-760.webp 760w" sizes="(max-width: 767px) 140px, (max-width: 1050px) 220px, 360px" width="760" height="800" alt="游戏里的包工头，戴着安全帽，身旁放着水泥袋" decoding="async" fetchpriority="high" />
       </header>
 
-      <section class="income-purpose" aria-labelledby="problem-title">
-        <div class="income-problem">
-          <h2 id="problem-title">赚钱效率差异</h2>
-          <p>制作过程中发现，有些玩法赚得特别快，有些很慢，有些甚至很难赚到钱。我担心这样下去，玩家只会选赚钱最快的，其他玩法做了也没人愿意玩。</p>
-        </div>
+      <section class="income-purpose" id="purpose" aria-labelledby="purpose-title">
+        <h2 id="purpose-title">设计初衷</h2>
+        <p>我想让大厅里有很多种赚钱方式。有自己就能玩的，也有和朋友一起玩的，还有股票、拳赛这种需要等一段时间才有收益的。</p>
+        <p>单人玩法里，我放了二十一点、老虎机、推币机和搬水泥，希望玩家可以按自己的喜好和情况来选。</p>
         <div class="income-roles">
           <h2 id="roles-title">四种单人玩法</h2>
           <p>我想让认真玩的玩家，长期收益大致接近搬水泥，同时保留每种玩法的区别。</p>
@@ -78,10 +77,27 @@
         </div>
       </section>
 
+      <section class="income-section income-comparison" aria-labelledby="comparison-title">
+        <h2 id="comparison-title">收益对照</h2>
+        <div class="income-table-wrap">
+          <table class="income-table income-reference-table" aria-labelledby="comparison-title" aria-describedby="comparison-note">
+            <colgroup><col class="reference-game" /><col class="reference-result" /><col /></colgroup>
+            <thead><tr><th scope="col">玩法</th><th scope="col">参考净收益</th><th scope="col">数据依据</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">搬水泥</th><td>待实测</td><td>需要结合当前地图的往返耗时与奖励计算。</td></tr>
+              <tr><th scope="row">老虎机</th><td><strong>约 52.5</strong><span class="reference-unit">金币／分钟</span></td><td>理论平均值。资金足够，每 4 秒完成一次。</td></tr>
+              <tr><th scope="row">二十一点</th><td><strong>约 49.59</strong><span class="reference-unit">金币／分钟</span></td><td>规则模拟。按可见牌决策，每局投入 50 金币，模拟 20,000 局。</td></tr>
+              <tr><th scope="row">推币机</th><td><strong>10 分钟 +830</strong><span class="reference-unit">金币</span></td><td>单次物理测试，在投币口到中间时投币；停止投币后再等 12 秒统计落币。</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="income-evidence" id="comparison-note">这些数据来自不同的检查方式，目前用来观察收益差异。搬水泥的往返耗时还要补测；推币机那次测试前 3 分钟仍亏了 245 金币，不能用整段结果保证短时间收益。具体条件和调整过程在下面。</p>
+      </section>
+
       <section class="income-section" aria-labelledby="adjustments">
         <h2 id="adjustments">收益调整</h2>
         <div class="income-adjustments">
-          <details class="income-detail" id="slots">
+          <details class="income-detail" id="slots" open>
             <summary>
               <h3>老虎机</h3>
               <span class="income-chevron" aria-hidden="true">&gt;</span>

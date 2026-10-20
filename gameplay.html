@@ -8,7 +8,7 @@
     <title>玩法与流程｜朋友归朋友</title>
     <link rel="icon" href="data:," />
     <link rel="stylesheet" href="./styles.css?v=20261018-footer" />
-    <link rel="stylesheet" href="./gameplay.css?v=20261018-toggle-labels" />
+    <link rel="stylesheet" href="./gameplay.css?v=20261020-match-flow" />
     <script src="./gameplay.js?v=20261018-directory" defer></script>
     <link rel="stylesheet" href="./site-nav.css?v=20261018-directory" />
     <script src="./site-nav.js?v=20261018-directory" defer></script>
@@ -59,12 +59,26 @@
       </header>
 
       <section class="daily-overview" aria-label="整局流程">
+        <p class="match-goal">玩家每天赚钱、购买战斗牌和装备，为对战做准备。整局结束时，<strong>总积分最高的玩家获胜，同分并列。</strong></p>
         <ol class="daily-flow" aria-label="每天的游戏流程">
-          <li><strong>短活动</strong></li>
-          <li><strong>大厅自由行动</strong></li>
-          <li><strong>布阵与对战</strong></li>
-          <li><strong>每日结算</strong></li>
+          <li>
+            <strong>短活动</strong>
+            <p>按活动表现拿金币奖励，为大厅采购攒钱。</p>
+          </li>
+          <li>
+            <strong>大厅自由行动</strong>
+            <p>赚钱、购物、竞拍，也能和朋友互相整蛊。</p>
+          </li>
+          <li>
+            <strong>布阵与对战</strong>
+            <p>安排三路阵容和战术，获胜得 3 分，平局各 1 分。</p>
+          </li>
+          <li>
+            <strong>每日结算</strong>
+            <p>查看当天收支、对战结果与累计积分。</p>
+          </li>
         </ol>
+        <p class="match-cycle">结算后进入下一天，继续同样的流程；最后一天结算后公布总排名。目前一局暂定五天。</p>
       </section>
 
       <figure class="gameplay-film overview-film" id="overview" aria-label="游戏流程概览">
@@ -75,6 +89,18 @@
           <a href="./assets/videos/friends-game-overview-v2.mp4?v=20261018-clean">打开一分钟流程概览</a>
         </video>
       </figure>
+
+      <!-- Reserved for the user's future multiplayer recording.
+           Add the approved video source, poster, and a factual caption before removing hidden.
+           Keep the section hidden while no recording is available. -->
+      <section class="play-examples" id="friends-playtest" aria-labelledby="friends-playtest-title" hidden>
+        <h2 id="friends-playtest-title">和朋友一起玩</h2>
+        <figure class="gameplay-film">
+          <video class="gameplay-video" id="friends-playtest-video" controls playsinline preload="none"
+            aria-label="和朋友一起玩《朋友归朋友》的实机片段"></video>
+          <figcaption></figcaption>
+        </figure>
+      </section>
 
       <section class="play-examples" id="play-examples" aria-labelledby="examples-title">
         <h2 id="examples-title">玩法片段</h2>

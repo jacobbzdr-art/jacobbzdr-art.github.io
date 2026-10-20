@@ -15,17 +15,27 @@
 .flow-intro h1 span { color: var(--gold); }
 
 .daily-overview { width: min(960px, 100%); margin-inline: auto; padding-block: 32px 26px; }
+.match-goal {
+  max-width: 760px; margin: 0 auto 28px; color: var(--soft-paper);
+  font-size: 16px; line-height: 1.9; text-align: center; text-wrap: pretty;
+}
+.match-goal strong { color: var(--paper); font-weight: 600; }
 .daily-flow {
   display: grid; grid-template-columns: repeat(4, minmax(0, 1fr));
-  align-items: center; gap: 30px; padding: 0; margin: 0; list-style: none;
+  align-items: start; gap: 30px; padding: 0; margin: 0; list-style: none;
 }
-.daily-flow li { position: relative; text-align: center; }
+.daily-flow li { position: relative; min-width: 0; text-align: center; }
 .daily-flow li:not(:last-child)::after {
-  content: ">"; position: absolute; right: -24px; top: 50%;
+  content: ">"; position: absolute; right: -24px; top: 16px;
   transform: translateY(-50%); color: #fff; font-size: 26px; line-height: 1;
 }
 .daily-flow strong {
   display: block; font-size: clamp(16px, 2vw, 21px); font-weight: 600; line-height: 1.5;
+}
+.daily-flow p { margin: 8px 0 0; color: var(--soft-paper); font-size: 14px; line-height: 1.8; }
+.match-cycle {
+  margin: 22px 0 0; padding-top: 18px; border-top: 1px solid rgb(243 239 227 / 24%);
+  color: var(--soft-paper); font-size: 14px; line-height: 1.8; text-align: center;
 }
 
 .gameplay-film { margin: 0; min-width: 0; }
@@ -116,9 +126,16 @@ details[open] > summary > .disclosure-arrow { transform: rotate(90deg); }
 @media (max-width: 700px) {
   .gameplay-page { padding-top: 16px; padding-bottom: 42px; }
   .daily-overview { padding-block: 24px 22px; }
-  .daily-flow { gap: 18px; }
-  .daily-flow strong { font-size: clamp(12px, 2.6vw, 16px); }
-  .daily-flow li:not(:last-child)::after { right: -16px; font-size: 18px; }
+  .match-goal { margin-bottom: 26px; text-align: left; }
+  .has-site-nav .daily-flow { grid-template-columns: minmax(0, 1fr); gap: 28px; }
+  .daily-flow li { display: grid; grid-template-columns: 104px minmax(0, 1fr); align-items: start; gap: 16px; text-align: left; }
+  .has-site-nav .gameplay-page .daily-flow strong { font-size: 16px; }
+  .daily-flow p { margin: 0; }
+  .has-site-nav .daily-flow li:not(:last-child)::after {
+    right: auto; left: 32px; top: auto; bottom: -23px; width: 18px; height: 18px;
+    transform: rotate(90deg); font-size: 18px; text-align: center;
+  }
+  .match-cycle { margin-top: 24px; text-align: left; }
   .play-examples { margin-top: 34px; }
   .play-examples > h2 { font-size: 23px; margin-bottom: 14px; }
   .featured-case > summary { grid-template-columns: minmax(0, 1fr) 120px 14px; gap: 18px; padding-block: 22px; }

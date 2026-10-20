@@ -9,7 +9,7 @@
     <link rel="icon" href="data:," />
     <link rel="preload" href="./assets/fonts/auction-title.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="./styles.css?v=20261018-footer" />
-    <link rel="stylesheet" href="./auction.css?v=20261018-auctioneer" />
+    <link rel="stylesheet" href="./auction.css?v=20261020-reading" />
     <link rel="stylesheet" href="./site-nav.css?v=20261018-directory" />
     <script src="./site-nav.js?v=20261018-directory" defer></script>
     <link rel="stylesheet" href="./ink-background.css?v=20261020-v4" />
@@ -60,13 +60,14 @@
           <figure class="auction-host">
             <img src="./assets/characters/auctioneer-760.webp" srcset="./assets/characters/auctioneer-380.webp 380w, ./assets/characters/auctioneer-760.webp 760w" sizes="(max-width: 767px) 48vw, 320px" width="760" height="900" alt="游戏中的拍卖师站在拍卖台后，举着拍卖槌。" fetchpriority="high" decoding="async" />
           </figure>
+          <p class="case-lead goal-lead">我想让玩家买东西的时候，也能和朋友抢一抢、互相试探，开点玩笑。</p>
           <details class="goal disclosure">
             <summary class="text-toggle">
               <span class="toggle-label">设计目标</span>
               <span class="chevron" aria-hidden="true">&gt;</span>
             </summary>
             <div class="detail-copy">
-              <p>拍卖可以拿到角色、装备等东西。我想让玩家买东西的时候，也能和朋友抢一抢、互相试探，开点玩笑。</p>
+              <p>拍卖可以拿到角色、装备等东西。</p>
               <p>碰上正好能用的拍品，就会想买下来。可朋友也一直跟价，你又拿不准他是真的想要，还是想让你多花点钱。</p>
               <p>比如，看到朋友很想要某件拍品，就故意加价，想让他多花点钱。结果朋友看出来了，突然不跟了，自己反而成了最后的买家。这是我想让拍卖里出现的情况。</p>
               <p>想坑朋友，也有可能把自己坑了。每次加价，都得做好最后由自己买单的准备。我希望玩家能从这些意外里，留下一些搞笑有意思的片段。</p>
@@ -171,7 +172,7 @@
             <h3>原来的节奏</h3>
             <p class="problem-line"><span>有人出价后，</span><span>只留 3 秒跟价。</span></p>
             <p class="revision-before">拍品出现后直接开始 6 秒倒计时。每次有人出价，就重新计时 3 秒；期间没人继续加价，就立刻结算并切到下一件。没有单独的看货时间，也没有三次询价。</p>
-            <details class="revision-reason disclosure">
+            <details class="revision-reason disclosure" open>
               <summary class="text-toggle">
                 <span class="toggle-label">我的判断</span>
                 <span class="chevron" aria-hidden="true">&gt;</span>

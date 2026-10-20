@@ -27,7 +27,11 @@
 .home-skip-link:focus { transform: none; }
 .home-page .masthead { padding: 8px 0 20px; }
 .home-page .masthead h1 { width: min(540px, 100%); }
-.home-page .portfolio-purpose { color: var(--muted); font-size: 14px; }
+.home-page .portfolio-purpose {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 18px;
+  color: var(--muted); font-size: 14px;
+}
+.home-page .creator-role { color: var(--paper); font-weight: 500; }
 .home-page .divider { height: 1px; background: var(--line); opacity: 1; }
 .home-page .game {
   grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr);

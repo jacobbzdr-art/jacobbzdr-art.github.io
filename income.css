@@ -25,9 +25,10 @@
 .income-intro { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, .54fr); grid-template-areas: "title art" "copy art"; gap: 22px 28px; align-items: center; padding-bottom: 42px; }
 .income-intro h1 { grid-area: title; margin: 0; align-self: end; }
 .income-intro-copy { grid-area: copy; align-self: start; }
+.income-intro-copy h2 { margin-bottom: 12px; font-size: 22px; }
 .income-hero-art { grid-area: art; display: block; justify-self: end; width: min(100%, 360px); height: auto; pointer-events: none; }
 .income-page .income-lead { font-size: 19px; }
-.income-purpose { padding-top: 36px; border-top: 1px solid var(--line); }
+.income-purpose { padding-top: 36px; border-top: 1px solid var(--line); scroll-margin-top: 28px; }
 .income-problem { display: grid; grid-template-columns: minmax(200px, .7fr) minmax(0, 1.5fr); gap: 36px; align-items: start; }
 .income-problem h2 { font-size: 25px; margin: 3px 0 0; }
 .income-roles { margin-top: 44px; }
@@ -61,6 +62,12 @@
 .income-table tbody th { font-weight: 400; }
 .income-table td { white-space: nowrap; }
 .income-table td:last-child { color: var(--paper); }
+.income-reference-table { table-layout: fixed; }
+.income-reference-table .reference-game { width: 16%; }
+.income-reference-table .reference-result { width: 29%; }
+.income-reference-table th, .income-reference-table td { text-align: left; }
+.income-reference-table td { white-space: normal; overflow-wrap: break-word; }
+.income-reference-table .reference-unit { display: block; color: var(--muted); font-size: 13px; }
 .income-page .income-evidence { margin-top: 14px; color: var(--muted); font-size: 14px; line-height: 1.9; }
 .income-page .contact { margin-top: 54px; border-top-color: var(--line); }
 .income-page .contact p { font-size: 12px; color: var(--muted); }
@@ -99,6 +106,12 @@
   .income-table { font-size: 14px; }
   .income-table th, .income-table td { padding: 12px 10px; }
   .income-table thead th { font-size: 13px; }
+  .income-reference-table .reference-game { width: 21%; }
+  .income-reference-table .reference-result { width: 29%; }
+  .income-reference-table th, .income-reference-table td { padding-inline: 6px; }
+  .income-reference-table th:first-child { padding-left: 0; }
+  .income-reference-table td:last-child, .income-reference-table th:last-child { padding-right: 0; }
+  .income-reference-table .reference-unit { font-size: 12px; }
   .income-page .income-evidence { font-size: 13px; }
   .income-page .contact { margin-top: 40px; }
 }
