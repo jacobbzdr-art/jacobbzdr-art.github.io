@@ -1,0 +1,68 @@
+{
+  "date": "2026-10-20",
+  "project": "朋友归朋友",
+  "scenario": "搬水泥：当前大厅无移速饰品、无人干扰、往返均步行",
+  "method": "现有游戏内自动检查控制实际角色移动、碰撞、取货和交付。测量开始前定位到取货点；实测往返途中不传送。每次独立运行，不是连续三趟总时长。",
+  "n": 3,
+  "reward_coins_per_delivery": 50,
+  "trials": [
+    {
+      "trial": 1,
+      "outbound_seconds": 30.67,
+      "return_seconds": 30.621,
+      "round_trip_walking_seconds": 61.291,
+      "delivery_reward_confirmed": true
+    },
+    {
+      "trial": 2,
+      "outbound_seconds": 30.657,
+      "return_seconds": 30.664,
+      "round_trip_walking_seconds": 61.321,
+      "delivery_reward_confirmed": true
+    },
+    {
+      "trial": 3,
+      "outbound_seconds": 30.662,
+      "return_seconds": 30.601,
+      "round_trip_walking_seconds": 61.263,
+      "delivery_reward_confirmed": true
+    }
+  ],
+  "mean_round_trip_walking_seconds": 61.291666666666664,
+  "walking_only_coins_per_minute": 48.94629503738953,
+  "formula": "50金币 × 3次 ÷ 三次步行总秒数 × 60",
+  "excluded": "不含取货、交货停留和截图停留；未使用空手冲刺或跳跃，不代表真人完整流程或最高效率。",
+  "version": "2026-10-20 当前工程的已编译游戏模块和当前大厅地图；非历史 r138 独立包。",
+  "source_fingerprints": {
+    "Binaries/Mac/libUnrealEditor-DawnExchange.dylib": "d01eef7e4280f764847857ba2244dd5f23cc044556b6b7e95372a8ffe7e1fcfe",
+    "Content/DawnExchange/Maps/L_NeonExchange.umap": "22509886397eaa241ce7d90713ab32823f3325d8ab4e391b5113d8b280ef5d11",
+    "Source/DawnExchange/Net/DXHallWorkProbe.cpp": "5bec6ab945306cc83175db55bedc240b02fc7188b232d299c27e615c2a3e211c",
+    "Source/DawnExchange/Net/DXProbeMovement.cpp": "9d8d85890de94820cf6e918e89569e88a9ef9a2d37c294720e6cf457232517e4",
+    "Source/DawnExchange/Net/DXHallWorkAuthority.cpp": "942c937c5e16f28660b7323c41a742068e8abdd8e1008f4aabfb243671faaeb7",
+    "Source/DawnExchange/Presentation/DXHallWorkScene.cpp": "396d9f188ecb21afe76ba8560fcb7635cd0052c7e153ccb6f380b39fc9baebc4",
+    "Source/DawnExchange/Presentation/DXCharacterMovement.cpp": "5db6a0503cda7fd57ecc06193d4d0e992cb065d31ae2431535f602e1331668bb",
+    "Source/DawnExchange/Presentation/DXCharacterMovement.h": "24389a5cfff28097e8a4736ce44ea2c70f63a9b866907d82ecbaf6669db0cbae",
+    "Source/DawnExchange/Rules/DXHallWork.cpp": "cc8ed86345ad635e21dbd3bf959ebbd3b035800439657e125ff199c4fd2847df"
+  },
+  "inputs_unchanged_during_trials": true,
+  "wall_clock_crosscheck": [
+    {
+      "trial": 1,
+      "wall_seconds_between_leg_endpoints": 33.484,
+      "game_seconds_between_leg_endpoints": 33.48527333885431,
+      "difference_seconds": -0.0012733388543111346
+    },
+    {
+      "trial": 2,
+      "wall_seconds_between_leg_endpoints": 33.527,
+      "game_seconds_between_leg_endpoints": 33.526202999055386,
+      "difference_seconds": 0.0007970009446154336
+    },
+    {
+      "trial": 3,
+      "wall_seconds_between_leg_endpoints": 33.457,
+      "game_seconds_between_leg_endpoints": 33.4537468701601,
+      "difference_seconds": 0.0032531298398978947
+    }
+  ]
+}
