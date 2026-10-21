@@ -8,7 +8,7 @@
     <title>郑达仁的游戏</title>
     <link rel="icon" href="data:," />
     <link rel="stylesheet" href="./styles.css?v=20261018-footer" />
-    <link rel="stylesheet" href="./home.css?v=20261020-reading" />
+    <link rel="stylesheet" href="./home.css?v=20261021-download" />
     <link rel="stylesheet" href="./site-nav.css?v=20261018-directory" />
     <script src="./site-nav.js?v=20261018-directory" defer></script>
     <link rel="stylesheet" href="./ink-background.css?v=20261020-v4" />
@@ -23,7 +23,12 @@
       </button>
       <nav class="directory-nav" id="portfolio-directory" aria-label="作品集目录">
         <ul>
-          <li><a class="directory-link" href="./index.html" data-nav-page="home">项目概览</a></li>
+          <li>
+            <a class="directory-link" href="./index.html" data-nav-page="home">项目概览</a>
+            <ul class="directory-children">
+              <li><a class="directory-link" href="./index.html#download" data-nav-page="home" data-nav-target="download">下载试玩</a></li>
+            </ul>
+          </li>
           <li>
             <a class="directory-link" href="./gameplay.html" data-nav-page="gameplay">玩法与流程</a>
             <ul class="directory-children">
@@ -87,6 +92,30 @@
         <aside class="project-progress" aria-labelledby="progress-title">
           <h3 id="progress-title">当前进度</h3>
           <p>现在已经有 <span>Mac 和 Windows 版本</span>，也和朋友一起玩过了。<br />正在准备 <span>Steam Playtest</span>。</p>
+          <section class="playtest-download" id="download" aria-labelledby="download-title">
+            <h3 id="download-title">下载试玩</h3>
+            <p class="download-version">r141 <time datetime="2026-10-21">2026.10.21 更新</time></p>
+            <div class="download-options">
+              <a class="download-option" href="https://github.com/jacobbzdr-art/jacobbzdr-art.github.io/releases/download/playtest-r141/Friends-r141-Windows-x64.zip" aria-label="下载 Windows 试玩版，64 位，375 MB">
+                <span class="download-label">下载 Windows 版</span>
+                <span class="download-meta">64 位，375 MB</span>
+              </a>
+              <a class="download-option" href="https://github.com/jacobbzdr-art/jacobbzdr-art.github.io/releases/download/playtest-r141/Friends-r141-Mac-AppleSilicon.zip" aria-label="下载 Mac 试玩版，Apple 芯片，macOS 14 或更新版本，382 MB">
+                <span class="download-label">下载 Mac 版</span>
+                <span class="download-meta">Apple 芯片，382 MB<br />macOS 14 或更新版本</span>
+              </a>
+            </div>
+            <p class="download-intro">开发中试玩版，可以先进入“单人练习”体验。</p>
+            <details class="download-guide">
+              <summary>试玩说明</summary>
+              <div class="download-guide-body">
+                <p><strong>Windows：</strong>完整解压后，打开最外层的 DawnExchange.exe。如果提示缺少 VCRUNTIME 或 MSVCP 运行库，安装<a href="https://aka.ms/vc14/vc_redist.x64.exe">微软 VC++ x64 运行库</a>后重试。</p>
+                <p><strong>Mac：</strong>解压后打开 DawnExchange.app。当前版本尚未经过 Apple 公证，首次打开可能需要在“系统设置 → 隐私与安全性”中确认允许打开。</p>
+                <p><strong>和朋友联机：</strong>支持 2–8 人，所有人需要使用相同版本。房主创建房间，其他玩家填写房主地址加入；异地联机需要可互通的网络。本轮尚未确认 Mac 与 Windows 互联。</p>
+                <p class="download-test-note">Mac 版已检查启动和部分人机流程。Windows 版已完成打包，画面和操作仍待实机试玩确认。</p>
+              </div>
+            </details>
+          </section>
         </aside>
       </section>
       <footer class="contact" aria-label="联系郑达仁">

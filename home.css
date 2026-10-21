@@ -63,6 +63,34 @@
 .project-progress h3 { margin: 0 0 7px; color: var(--muted); font-size: 13px; font-weight: 400; line-height: 1.6; }
 .project-progress p { margin: 0; color: var(--soft-paper); font-size: 15px; line-height: 1.9; }
 .project-progress p span { white-space: nowrap; }
+.playtest-download { margin-top: 24px; }
+.project-progress .playtest-download h3 { margin-bottom: 3px; color: var(--paper); font-size: 18px; font-weight: 600; }
+.project-progress .download-version { color: var(--muted); font-size: 12px; }
+.download-version time { margin-left: 12px; }
+.download-options { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 24px; margin: 12px 0; }
+.download-option { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; min-height: 44px; padding: 8px 0; color: var(--gold); text-decoration: none; }
+.download-label { font-size: 16px; font-weight: 500; line-height: 1.65; white-space: nowrap; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 6px; }
+.download-meta { color: var(--muted); font-size: 12px; line-height: 1.7; }
+.download-option:hover .download-label { color: var(--paper); }
+.download-option:active .download-label { transform: translateY(1px); }
+.download-option:focus-visible, .download-guide summary:focus-visible, .download-guide a:focus-visible { outline: 2px solid var(--gold); outline-offset: 5px; }
+.project-progress .download-intro { font-size: 13px; }
+.download-guide { margin-top: 10px; }
+.download-guide summary { display: flex; align-items: center; gap: 12px; width: fit-content; min-height: 44px; color: var(--gold); font-size: 13px; cursor: pointer; list-style: none; }
+.download-guide summary::-webkit-details-marker { display: none; }
+.download-guide summary::after { content: ">"; color: var(--soft-paper); }
+.download-guide[open] summary::after { transform: rotate(90deg); }
+.download-guide summary:hover { color: var(--paper); }
+.project-progress .download-guide-body p { margin: 10px 0 0; font-size: 13px; line-height: 1.9; overflow-wrap: anywhere; }
+.download-guide strong { color: var(--paper); font-weight: 500; }
+.download-guide a { color: var(--gold); text-underline-offset: 4px; }
+.project-progress .download-test-note { color: var(--muted); }
+@container portfolio (min-width: 561px) and (max-width: 760px) {
+  .download-options { grid-template-columns: minmax(0, 1fr); gap: 6px; }
+}
+@media (max-width: 360px) {
+  .download-options { grid-template-columns: minmax(0, 1fr); gap: 6px; }
+}
 .home-page .contact { margin-top: 48px; padding-top: 18px; border-top-color: var(--line); }
 .home-page .contact p { color: var(--muted); font-size: 13px; }
 .home-page .contact a { font-size: 14px; }
