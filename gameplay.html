@@ -8,8 +8,8 @@
     <title>玩法与流程｜朋友归朋友</title>
     <link rel="icon" href="data:," />
     <link rel="stylesheet" href="./styles.css?v=20261018-footer" />
-    <link rel="stylesheet" href="./gameplay.css?v=20261020-match-flow" />
-    <script src="./gameplay.js?v=20261018-directory" defer></script>
+    <link rel="stylesheet" href="./gameplay.css?v=20261022-r141-videos" />
+    <script src="./gameplay.js?v=20261022-r141-videos" defer></script>
     <link rel="stylesheet" href="./site-nav.css?v=20261018-directory" />
     <script src="./site-nav.js?v=20261018-directory" defer></script>
     <link rel="stylesheet" href="./ink-background.css?v=20261020-v4" />
@@ -88,10 +88,10 @@
 
       <figure class="gameplay-film overview-film" id="overview" aria-label="游戏流程概览">
         <video class="gameplay-video" id="overview-video" width="1920" height="1200" controls playsinline preload="metadata"
-          poster="./assets/videos/friends-game-overview-v2-poster.jpg?v=20261018-clean"
-          aria-label="朋友归朋友一分钟流程概览：短活动争抢金币，大厅竞拍，布阵与三路对战，再到每日结算。">
-          <source src="./assets/videos/friends-game-overview-v2.mp4?v=20261018-clean" type="video/mp4" />
-          <a href="./assets/videos/friends-game-overview-v2.mp4?v=20261018-clean">打开一分钟流程概览</a>
+          poster="./assets/videos/friends-game-overview-r141-poster.jpg"
+          aria-label="朋友归朋友一分钟流程概览：停车争位、大厅赚钱与购物、公开竞拍、布阵与战术选择，再到三路对战和每日结算。">
+          <source src="./assets/videos/friends-game-overview-r141.mp4" type="video/mp4" />
+          <a href="./assets/videos/friends-game-overview-r141.mp4">打开一分钟流程概览</a>
         </video>
       </figure>
 
@@ -154,6 +154,14 @@
                 </article>
                 <article class="other-game" aria-labelledby="other-activity-1">
                   <h5 id="other-activity-1">碰碰停车场</h5>
+                  <figure class="gameplay-film">
+                    <video class="gameplay-video" id="parking-video" width="1670" height="1044" controls playsinline preload="none" poster="./assets/videos/parking-r141-poster.jpg"
+                      aria-label="碰碰停车场人机演示：原速展示争抢车位到判定结果。">
+                      <source src="./assets/videos/parking-r141.mp4" type="video/mp4" />
+                      <a href="./assets/videos/parking-r141.mp4">打开碰碰停车场演示视频</a>
+                    </video>
+                    <figcaption>一轮车位争抢（人机演示）</figcaption>
+                  </figure>
                   <p>玩家开车抢亮起的车位，也能互相碰撞。倒计时结束时，按车身占住车位的面积判断车位算谁的，一共六轮，累计得分。</p>
                   <p><strong>设计思路：</strong>车位有高分和普通两种。是去抢高分，还是先找一个没那么挤的车位，玩家可以自己选。先停进去也还要小心，朋友可能最后一刻撞过来。</p>
                 </article>
@@ -169,20 +177,20 @@
           <details class="featured-case" id="hall">
             <summary>
               <div class="case-teaser">
-                <h3 id="hall-title">大厅自由行动 <span>拍卖</span></h3>
+                <h3 id="hall-title">大厅自由行动</h3>
                 <span class="case-action"><span class="when-closed">看实机与设计</span><span class="when-open">收起内容</span></span>
               </div>
-              <img class="case-preview" src="./assets/videos/auction-public-bot-poster.jpg" width="1672" height="1044" alt="" loading="lazy" />
+              <img class="case-preview" src="./assets/videos/hall-activities-r141-poster.jpg" width="1670" height="1044" alt="" loading="lazy" />
               <span class="disclosure-arrow" aria-hidden="true">&gt;</span>
             </summary>
             <div class="case-body">
               <figure class="gameplay-film">
-                <video class="gameplay-video" id="auction-video" width="1672" height="1044" controls playsinline preload="none" poster="./assets/videos/auction-public-bot-poster.jpg"
-                  aria-label="公开竞拍人机演示：一星法师与强化组合，从拍品展示、互相加价到成交。">
-                  <source src="./assets/videos/auction-public-bot-demo.mp4" type="video/mp4" />
-                  <a href="./assets/videos/auction-public-bot-demo.mp4">打开公开竞拍演示视频</a>
+                <video class="gameplay-video" id="hall-video" width="1670" height="1044" controls playsinline preload="none" poster="./assets/videos/hall-activities-r141-poster.jpg"
+                  aria-label="大厅活动人机演示：在大厅赚钱、购物，为接下来的对战做准备。">
+                  <source src="./assets/videos/hall-activities-r141.mp4" type="video/mp4" />
+                  <a href="./assets/videos/hall-activities-r141.mp4">打开大厅活动演示视频</a>
                 </video>
-                <figcaption>一轮公开竞拍（人机演示）</figcaption>
+                <figcaption>大厅活动（人机演示）</figcaption>
               </figure>
               <div class="case-copy">
                 <section aria-labelledby="hall-purpose-title">
@@ -227,17 +235,17 @@
                 <h3 id="battle-title">布阵与对战</h3>
                 <span class="case-action"><span class="when-closed">看实机与设计</span><span class="when-open">收起内容</span></span>
               </div>
-              <img class="case-preview" src="./assets/videos/formation-battle-bot-poster.jpg" width="1672" height="1044" alt="" loading="lazy" />
+              <img class="case-preview" src="./assets/videos/formation-battle-r141-poster.jpg" width="1670" height="1044" alt="" loading="lazy" />
               <span class="disclosure-arrow" aria-hidden="true">&gt;</span>
             </summary>
             <div class="case-body">
               <figure class="gameplay-film">
-                <video class="gameplay-video" id="battle-video" width="1672" height="1044" controls playsinline preload="none" poster="./assets/videos/formation-battle-bot-poster.jpg"
-                  aria-label="布阵与对战人机演示：放置战斗牌、配置装备、逐路交锋到积分结算，本轮未使用战术牌。">
-                  <source src="./assets/videos/formation-battle-bot-demo.mp4" type="video/mp4" />
-                  <a href="./assets/videos/formation-battle-bot-demo.mp4">打开布阵与对战演示视频</a>
+                <video class="gameplay-video" id="battle-video" width="1670" height="1044" controls playsinline preload="none" poster="./assets/videos/formation-battle-r141-poster.jpg"
+                  aria-label="布阵与对战人机演示：放置角色、使用强化、三路对战与结算。">
+                  <source src="./assets/videos/formation-battle-r141.mp4" type="video/mp4" />
+                  <a href="./assets/videos/formation-battle-r141.mp4">打开布阵与对战演示视频</a>
                 </video>
-                <figcaption>一轮布阵与对战（人机演示，本轮未使用战术牌）</figcaption>
+                <figcaption>一轮布阵与对战（人机演示）</figcaption>
               </figure>
               <div class="case-copy">
                 <section aria-labelledby="battle-rules-title">

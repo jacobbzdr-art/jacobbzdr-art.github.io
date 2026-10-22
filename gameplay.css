@@ -114,6 +114,7 @@ details[open] > summary > .disclosure-arrow { transform: rotate(90deg); }
 .other-game-list { max-width: 680px; padding: 18px 0 6px; }
 .other-game + .other-game { margin-top: 28px; }
 .other-game h5 { margin: 0 0 8px; color: var(--gold); font-size: 19px; font-weight: 500; }
+.other-game .gameplay-film { margin: 14px 0 18px; }
 .other-game p { margin: 0; color: var(--soft-paper); font-size: 16px; line-height: 1.9; }
 .other-game p + p { margin-top: 10px; }
 .other-game strong { font-weight: 600; color: var(--paper); }

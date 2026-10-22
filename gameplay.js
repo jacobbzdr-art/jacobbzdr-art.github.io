@@ -1,6 +1,7 @@
 (() => {
   const videos = [...document.querySelectorAll("video")];
-  const cases = [...document.querySelectorAll(".featured-case")];
+  const videoDetails = [...document.querySelectorAll("details")]
+    .filter((section) => section.querySelector("video"));
 
   videos.forEach((video) => {
     video.addEventListener("play", () => {
@@ -10,16 +11,10 @@
     });
   });
 
-  cases.forEach((section) => {
+  videoDetails.forEach((section) => {
     section.addEventListener("toggle", () => {
-      section.querySelectorAll("video").forEach((video) => {
-        if (!section.open) {
-          video.pause();
-        } else if (video.preload === "none") {
-          video.preload = "metadata";
-          video.load();
-        }
-      });
+      if (section.open) return;
+      section.querySelectorAll("video").forEach((video) => video.pause());
     });
   });
 
