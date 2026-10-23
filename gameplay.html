@@ -8,7 +8,7 @@
     <title>玩法与流程｜朋友归朋友</title>
     <link rel="icon" href="data:," />
     <link rel="stylesheet" href="./styles.css?v=20261018-footer" />
-    <link rel="stylesheet" href="./gameplay.css?v=20261023-activities" />
+    <link rel="stylesheet" href="./gameplay.css?v=20261023-hall" />
     <script src="./gameplay.js?v=20261022-r141-videos" defer></script>
     <link rel="stylesheet" href="./site-nav.css?v=20261018-directory" />
     <script src="./site-nav.js?v=20261018-directory" defer></script>
@@ -16,7 +16,7 @@
     <script src="./ink-background.js?v=20261020-v4" defer></script>
   </head>
   <body class="has-site-nav" data-nav-page="gameplay">
-    <a class="flow-skip-link" href="#play-examples">跳到玩法片段</a>
+    <a class="flow-skip-link" href="#play-examples">跳到玩法片段展示</a>
     <aside class="site-directory">
       <button class="directory-toggle" type="button" aria-expanded="false" aria-controls="portfolio-directory" hidden>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16" /></svg>
@@ -108,7 +108,7 @@
       </section>
 
       <section class="play-examples" id="play-examples" aria-labelledby="examples-title">
-        <h2 id="examples-title">玩法片段</h2>
+        <h2 id="examples-title">玩法片段展示</h2>
         <div class="featured-list">
           <details class="featured-case" id="activities">
             <summary>
@@ -206,7 +206,7 @@
               <img class="case-preview" src="./assets/videos/hall-activities-r141-poster.jpg" width="1670" height="1044" alt="" loading="lazy" />
               <span class="disclosure-arrow" aria-hidden="true">&gt;</span>
             </summary>
-            <div class="case-body">
+            <div class="case-body hall-overview">
               <figure class="gameplay-film">
                 <video class="gameplay-video" id="hall-video" width="1670" height="1044" controls playsinline preload="none" poster="./assets/videos/hall-activities-r141-poster.jpg"
                   aria-label="大厅活动人机演示：在大厅赚钱、购物，为接下来的对战做准备。">
@@ -219,37 +219,63 @@
                 <section aria-labelledby="hall-purpose-title">
                   <h4 id="hall-purpose-title">在大厅做准备</h4>
                   <p>短活动结束后，玩家回到大厅各自找点事做。可以玩几局、买点东西，也能凑过去看朋友在干什么，顺便整蛊一下。</p>
-                  <p>拍卖会先展示拍品和起拍价，想买的人就可以参与竞价。落槌前都能加价，最后由有效报价最高的人付款，拿走拍品。</p>
-                </section>
-                <section aria-labelledby="auction-design-title">
-                  <h4 id="auction-design-title">拍卖和商店有什么不同</h4>
-                  <p>商店按标价买东西。拍卖则可能便宜买到正好能用的东西，但朋友也想要的话，价格就可能一路加上去，最后也不一定归你。</p>
                 </section>
               </div>
             </div>
-            <details class="other-games">
-              <summary>
-                <span><strong>其他大厅玩法</strong><span class="other-game-names">二十一点、老虎机、商店</span></span>
-                <span class="disclosure-arrow" aria-hidden="true">&gt;</span>
-              </summary>
-              <div class="other-game-list">
-                <article class="other-game" aria-labelledby="other-hall-0">
-                  <h5 id="other-hall-0">二十一点</h5>
-                  <p>和庄家比点数，不能超过 21 点。过程中可以要牌、停牌或加倍。赢到的钱可以留着买东西，也可以接着玩。</p>
-                  <p><strong>设计思路：</strong>打牌的操作放在场景里，站在牌桌旁也能转头、走动。我想让玩家打牌时还能看看朋友在干什么，围观、聊几句。</p>
-                </article>
-                <article class="other-game" aria-labelledby="other-hall-1">
-                  <h5 id="other-hall-1">老虎机</h5>
-                  <p>先选这次投多少钱，再等转轮一个个停下。能拿回多少，要看最后的图案，也可能什么都拿不到。</p>
-                  <p><strong>设计思路：</strong>我想让玩家自己选愿意冒多大的风险，也能和朋友一起等开奖。</p>
-                </article>
-                <article class="other-game" aria-labelledby="other-hall-2">
-                  <h5 id="other-hall-2">商店</h5>
-                  <p>在点单机上选好战斗牌、装备或用品，付钱后拿到发票，再交给店员领东西。买来的东西可以用来布阵、参加短活动，也可以拿去整蛊朋友。</p>
-                  <p><strong>设计思路：</strong>商店每天卖的东西会随机变化。玩家得看今天有什么，再想这笔钱是用来补强阵容、买整蛊道具，还是留着参加拍卖。</p>
-                </article>
-              </div>
-            </details>
+            <div class="activity-list hall-game-list">
+              <article class="activity-game activity-text" aria-labelledby="hall-auction-title">
+                <h4 id="hall-auction-title">拍卖</h4>
+                <div class="case-copy">
+                  <section aria-labelledby="hall-auction-rules-title">
+                    <h5 id="hall-auction-rules-title">玩法</h5>
+                    <p>拍卖会先展示拍品和起拍价，想买的人就可以参与竞价。落槌前都能加价，最后由有效报价最高的人付款，拿走拍品。</p>
+                  </section>
+                  <section aria-labelledby="auction-design-title">
+                    <h5 id="auction-design-title">拍卖和商店有什么不同</h5>
+                    <p>商店按标价买东西。拍卖则可能便宜买到正好能用的东西，但朋友也想要的话，价格就可能一路加上去，最后也不一定归你。</p>
+                  </section>
+                </div>
+              </article>
+              <article class="activity-game activity-text" aria-labelledby="other-hall-0">
+                <h4 id="other-hall-0">二十一点</h4>
+                <div class="case-copy">
+                  <section aria-labelledby="hall-blackjack-rules-title">
+                    <h5 id="hall-blackjack-rules-title">玩法</h5>
+                    <p>和庄家比点数，不能超过 21 点。过程中可以要牌、停牌或加倍。赢到的钱可以留着买东西，也可以接着玩。</p>
+                  </section>
+                  <section aria-labelledby="hall-blackjack-design-title">
+                    <h5 id="hall-blackjack-design-title">设计思路</h5>
+                    <p>打牌的操作放在场景里，站在牌桌旁也能转头、走动。我想让玩家打牌时还能看看朋友在干什么，围观、聊几句。</p>
+                  </section>
+                </div>
+              </article>
+              <article class="activity-game activity-text" aria-labelledby="other-hall-1">
+                <h4 id="other-hall-1">老虎机</h4>
+                <div class="case-copy">
+                  <section aria-labelledby="hall-slots-rules-title">
+                    <h5 id="hall-slots-rules-title">玩法</h5>
+                    <p>先选这次投多少钱，再等转轮一个个停下。能拿回多少，要看最后的图案，也可能什么都拿不到。</p>
+                  </section>
+                  <section aria-labelledby="hall-slots-design-title">
+                    <h5 id="hall-slots-design-title">设计思路</h5>
+                    <p>我想让玩家自己选愿意冒多大的风险，也能和朋友一起等开奖。</p>
+                  </section>
+                </div>
+              </article>
+              <article class="activity-game activity-text" aria-labelledby="other-hall-2">
+                <h4 id="other-hall-2">商店</h4>
+                <div class="case-copy">
+                  <section aria-labelledby="hall-shop-rules-title">
+                    <h5 id="hall-shop-rules-title">玩法</h5>
+                    <p>在点单机上选好战斗牌、装备或用品，付钱后拿到发票，再交给店员领东西。买来的东西可以用来布阵、参加短活动，也可以拿去整蛊朋友。</p>
+                  </section>
+                  <section aria-labelledby="hall-shop-design-title">
+                    <h5 id="hall-shop-design-title">设计思路</h5>
+                    <p>商店每天卖的东西会随机变化。玩家得看今天有什么，再想这笔钱是用来补强阵容、买整蛊道具，还是留着参加拍卖。</p>
+                  </section>
+                </div>
+              </article>
+            </div>
           </details>
 
           <details class="featured-case" id="battle">
