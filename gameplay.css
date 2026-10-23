@@ -90,7 +90,7 @@ details[open] > summary > .disclosure-arrow { transform: rotate(90deg); }
 }
 .case-copy { min-width: 0; color: var(--soft-paper); font-size: 16px; line-height: 1.9; }
 .case-copy section + section { margin-top: 26px; }
-.case-copy h4 { margin: 0 0 10px; color: var(--paper); font-size: 18px; font-weight: 600; }
+.case-copy h4, .case-copy h5 { margin: 0 0 10px; color: var(--paper); font-size: 18px; font-weight: 600; }
 .case-copy p { margin: 0; }
 .case-copy p + p { margin-top: 14px; }
 .case-copy strong { color: var(--paper); font-weight: 600; }
@@ -103,6 +103,15 @@ details[open] > summary > .disclosure-arrow { transform: rotate(90deg); }
 .video-credit { margin: 10px 0 0; color: var(--soft-paper); font-size: 13px; line-height: 1.8; }
 .video-credit a { color: var(--gold); text-underline-offset: 4px; }
 
+.activity-list { padding-bottom: 30px; }
+.activity-game + .activity-game {
+  margin-top: 30px; padding-top: 28px; border-top: 1px solid rgb(243 239 227 / 24%);
+}
+.activity-game > h4 { margin: 0 0 20px; color: var(--gold); font-size: 24px; line-height: 1.5; font-weight: 500; }
+.activity-game .case-body { padding-bottom: 0; }
+.activity-text .case-copy { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; }
+.activity-text .case-copy section + section { margin-top: 0; }
+
 .other-games { margin: 0 0 30px; padding-left: 20px; border-left: 1px solid #85978d; }
 .other-games > summary {
   display: flex; justify-content: space-between; align-items: center; gap: 20px;
@@ -114,7 +123,6 @@ details[open] > summary > .disclosure-arrow { transform: rotate(90deg); }
 .other-game-list { max-width: 680px; padding: 18px 0 6px; }
 .other-game + .other-game { margin-top: 28px; }
 .other-game h5 { margin: 0 0 8px; color: var(--gold); font-size: 19px; font-weight: 500; }
-.other-game .gameplay-film { margin: 14px 0 18px; }
 .other-game p { margin: 0; color: var(--soft-paper); font-size: 16px; line-height: 1.9; }
 .other-game p + p { margin-top: 10px; }
 .other-game strong { font-weight: 600; color: var(--paper); }
@@ -147,6 +155,10 @@ details[open] > summary > .disclosure-arrow { transform: rotate(90deg); }
   .case-body { padding-bottom: 24px; }
   .case-copy { display: block; }
   .case-copy section + section { margin-top: 22px; }
+  .activity-list { padding-bottom: 24px; }
+  .activity-game > h4 { font-size: 22px; }
+  .activity-text .case-copy { display: block; }
+  .activity-text .case-copy section + section { margin-top: 22px; }
   .other-games { padding-left: 15px; margin-bottom: 24px; }
 }
 @media (max-width: 430px) {

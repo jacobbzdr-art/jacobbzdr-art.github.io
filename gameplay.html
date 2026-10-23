@@ -8,7 +8,7 @@
     <title>玩法与流程｜朋友归朋友</title>
     <link rel="icon" href="data:," />
     <link rel="stylesheet" href="./styles.css?v=20261018-footer" />
-    <link rel="stylesheet" href="./gameplay.css?v=20261022-r141-videos" />
+    <link rel="stylesheet" href="./gameplay.css?v=20261023-activities" />
     <script src="./gameplay.js?v=20261022-r141-videos" defer></script>
     <link rel="stylesheet" href="./site-nav.css?v=20261018-directory" />
     <script src="./site-nav.js?v=20261018-directory" defer></script>
@@ -113,47 +113,41 @@
           <details class="featured-case" id="activities">
             <summary>
               <div class="case-teaser">
-                <h3 id="activity-title">短活动 <span>跑酷夺筹</span></h3>
+                <h3 id="activity-title">短活动</h3>
                 <span class="case-action"><span class="when-closed">看实机与设计</span><span class="when-open">收起内容</span></span>
               </div>
               <img class="case-preview" src="./assets/videos/parkour-bot-poster.jpg" width="1672" height="1044" alt="" loading="lazy" />
               <span class="disclosure-arrow" aria-hidden="true">&gt;</span>
             </summary>
-            <div class="case-body">
-              <figure class="gameplay-film">
-                <video class="gameplay-video" id="parkour-video" width="1672" height="1044" controls playsinline preload="none" poster="./assets/videos/parkour-bot-poster.jpg"
-                  aria-label="跑酷夺筹人机演示：争抢金币、路线跳跃到奖励结算。">
-                  <source src="./assets/videos/parkour-bot-demo.mp4" type="video/mp4" />
-                  <a href="./assets/videos/parkour-bot-demo.mp4">打开跑酷夺筹演示视频</a>
-                </video>
-                <figcaption>跑酷夺筹（人机演示）</figcaption>
-                <p class="video-credit">注：短活动灵感来自 <a href="https://store.steampowered.com/app/880940/Pummel_Party/" target="_blank" rel="noopener noreferrer" aria-label="Pummel Party 的 Steam 商店页面（新标签页打开）">Pummel Party</a>。</p>
-              </figure>
-              <div class="case-copy">
-                <section aria-labelledby="parkour-rules-title">
-                  <h4 id="parkour-rules-title">玩法</h4>
-                  <p>场上一次只有<strong>一枚金币</strong>，被拿到后才会换位置。玩家可以选不同的路线过去抢，也可以通过推人干扰朋友拿金币。</p>
-                </section>
-                <section aria-labelledby="parkour-design-title">
-                  <h4 id="parkour-design-title">设计思路</h4>
-                  <p>地图里放了推车、弹簧床和跷跷板。推车的两端分别提供不同路线的登高捷径，玩家可以看金币刷在哪里，再决定走哪条路、用哪个机关。</p>
-                  <p>玩家的目标都是拿金币。我想让过去抢金币的方式多一些，抢的过程中也能互相推一推，留下一些搞笑有意思的片段。</p>
-                </section>
-              </div>
-            </div>
-            <details class="other-games">
-              <summary>
-                <span><strong>其他短活动</strong><span class="other-game-names">岩浆推人、碰碰停车场、自由死斗</span></span>
-                <span class="disclosure-arrow" aria-hidden="true">&gt;</span>
-              </summary>
-              <div class="other-game-list">
-                <article class="other-game" aria-labelledby="other-activity-0">
-                  <h5 id="other-activity-0">岩浆推人</h5>
-                  <p>一边想办法把朋友推下去，一边留意脚下快要塌掉的岩台。掉进岩浆，这一回合就淘汰了。</p>
-                  <p><strong>设计思路：</strong>推空后的收手时间比推中更长。朋友推空了，你就有机会把他推下去。</p>
-                </article>
-                <article class="other-game" aria-labelledby="other-activity-1">
-                  <h5 id="other-activity-1">碰碰停车场</h5>
+            <div class="activity-list">
+              <article class="activity-game" aria-labelledby="parkour-title">
+                <h4 id="parkour-title">跑酷夺筹</h4>
+                <div class="case-body">
+                  <figure class="gameplay-film">
+                    <video class="gameplay-video" id="parkour-video" width="1672" height="1044" controls playsinline preload="none" poster="./assets/videos/parkour-bot-poster.jpg"
+                      aria-label="跑酷夺筹人机演示：争抢金币、路线跳跃到奖励结算。">
+                      <source src="./assets/videos/parkour-bot-demo.mp4" type="video/mp4" />
+                      <a href="./assets/videos/parkour-bot-demo.mp4">打开跑酷夺筹演示视频</a>
+                    </video>
+                    <figcaption>跑酷夺筹（人机演示）</figcaption>
+                    <p class="video-credit">注：短活动灵感来自 <a href="https://store.steampowered.com/app/880940/Pummel_Party/" target="_blank" rel="noopener noreferrer" aria-label="Pummel Party 的 Steam 商店页面（新标签页打开）">Pummel Party</a>。</p>
+                  </figure>
+                  <div class="case-copy">
+                    <section aria-labelledby="parkour-rules-title">
+                      <h5 id="parkour-rules-title">玩法</h5>
+                      <p>场上一次只有<strong>一枚金币</strong>，被拿到后才会换位置。玩家可以选不同的路线过去抢，也可以通过推人干扰朋友拿金币。</p>
+                    </section>
+                    <section aria-labelledby="parkour-design-title">
+                      <h5 id="parkour-design-title">设计思路</h5>
+                      <p>地图里放了推车、弹簧床和跷跷板。推车的两端分别提供不同路线的登高捷径，玩家可以看金币刷在哪里，再决定走哪条路、用哪个机关。</p>
+                      <p>玩家的目标都是拿金币。我想让过去抢金币的方式多一些，抢的过程中也能互相推一推，留下一些搞笑有意思的片段。</p>
+                    </section>
+                  </div>
+                </div>
+              </article>
+              <article class="activity-game" aria-labelledby="other-activity-1">
+                <h4 id="other-activity-1">碰碰停车场</h4>
+                <div class="case-body">
                   <figure class="gameplay-film">
                     <video class="gameplay-video" id="parking-video" width="1670" height="1044" controls playsinline preload="none" poster="./assets/videos/parking-r141-poster.jpg"
                       aria-label="碰碰停车场人机演示：原速展示争抢车位到判定结果。">
@@ -162,16 +156,45 @@
                     </video>
                     <figcaption>一轮车位争抢（人机演示）</figcaption>
                   </figure>
-                  <p>玩家开车抢亮起的车位，也能互相碰撞。倒计时结束时，按车身占住车位的面积判断车位算谁的，一共六轮，累计得分。</p>
-                  <p><strong>设计思路：</strong>车位有高分和普通两种。是去抢高分，还是先找一个没那么挤的车位，玩家可以自己选。先停进去也还要小心，朋友可能最后一刻撞过来。</p>
-                </article>
-                <article class="other-game" aria-labelledby="other-activity-2">
-                  <h5 id="other-activity-2">自由死斗</h5>
-                  <p>两分钟内比谁击杀得多，倒下后两秒就能复活。可以借着掩体和侧路接近对手，也能随时切换已经有的武器。</p>
-                  <p><strong>设计思路：</strong>手枪和近战武器免费，步枪和狙击枪要在大厅买，死亡后不会掉落。我想让大厅里买不买枪的决定，也能影响接下来和朋友玩的短活动。</p>
-                </article>
-              </div>
-            </details>
+                  <div class="case-copy">
+                    <section aria-labelledby="parking-rules-title">
+                      <h5 id="parking-rules-title">玩法</h5>
+                      <p>玩家开车抢亮起的车位，也能互相碰撞。倒计时结束时，按车身占住车位的面积判断车位算谁的，一共六轮，累计得分。</p>
+                    </section>
+                    <section aria-labelledby="parking-design-title">
+                      <h5 id="parking-design-title">设计思路</h5>
+                      <p>车位有高分和普通两种。是去抢高分，还是先找一个没那么挤的车位，玩家可以自己选。先停进去也还要小心，朋友可能最后一刻撞过来。</p>
+                    </section>
+                  </div>
+                </div>
+              </article>
+              <article class="activity-game activity-text" aria-labelledby="other-activity-0">
+                <h4 id="other-activity-0">岩浆推人</h4>
+                <div class="case-copy">
+                  <section aria-labelledby="lava-rules-title">
+                    <h5 id="lava-rules-title">玩法</h5>
+                    <p>一边想办法把朋友推下去，一边留意脚下快要塌掉的岩台。掉进岩浆，这一回合就淘汰了。</p>
+                  </section>
+                  <section aria-labelledby="lava-design-title">
+                    <h5 id="lava-design-title">设计思路</h5>
+                    <p>推空后的收手时间比推中更长。朋友推空了，你就有机会把他推下去。</p>
+                  </section>
+                </div>
+              </article>
+              <article class="activity-game activity-text" aria-labelledby="other-activity-2">
+                <h4 id="other-activity-2">自由死斗</h4>
+                <div class="case-copy">
+                  <section aria-labelledby="deathmatch-rules-title">
+                    <h5 id="deathmatch-rules-title">玩法</h5>
+                    <p>两分钟内比谁击杀得多，倒下后两秒就能复活。可以借着掩体和侧路接近对手，也能随时切换已经有的武器。</p>
+                  </section>
+                  <section aria-labelledby="deathmatch-design-title">
+                    <h5 id="deathmatch-design-title">设计思路</h5>
+                    <p>手枪和近战武器免费，步枪和狙击枪要在大厅买，死亡后不会掉落。我想让大厅里买不买枪的决定，也能影响接下来和朋友玩的短活动。</p>
+                  </section>
+                </div>
+              </article>
+            </div>
           </details>
 
           <details class="featured-case" id="hall">
