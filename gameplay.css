@@ -158,3 +158,18 @@ details[open] > summary > .disclosure-arrow { transform: rotate(90deg); }
 @media (prefers-reduced-motion: reduce) {
   .disclosure-arrow { transition: none; }
 }
+.match-views { width: min(960px, 100%); margin: 42px auto; }
+.match-views h2 { margin: 0 0 18px; font-size: 24px; line-height: 1.45; }
+.match-shots { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.match-shots figure { margin: 0; }
+.match-shots img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: contain; background: #182c2a; }
+.match-shots figcaption, .match-checks p { margin: 10px 0 0; color: var(--soft-paper); font-size: 14px; line-height: 1.8; }
+.match-checks { margin-top: 16px; }
+.match-checks summary { display: list-item; list-style: disclosure-closed; width: fit-content; padding: 10px 0; color: var(--gold); font-size: 15px; }
+.match-checks[open] summary { list-style: disclosure-open; }
+.match-checks summary::-webkit-details-marker { display: inline; }
+.match-shots a { display: block; }
+.match-shots a:focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; }
+@container portfolio (max-width: 620px) {
+  .match-shots { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+}

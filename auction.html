@@ -27,7 +27,8 @@
           <li>
             <a class="directory-link" href="./index.html" data-nav-page="home">项目概览</a>
             <ul class="directory-children">
-              <li><a class="directory-link" href="./index.html#download" data-nav-page="home" data-nav-target="download">下载试玩</a></li>
+              <li><a class="directory-link" href="./index.html#download" data-nav-page="home" data-nav-target="download">朋友归朋友试玩</a></li>
+              <li><a class="directory-link" href="./index.html#standoff" data-nav-page="home" data-nav-target="standoff" lang="en">STANDOFF</a></li>
             </ul>
           </li>
           <li>
@@ -198,6 +199,13 @@
               <li>普通拍品成交或流拍后，<strong>结果停留 4 秒</strong>，再展示下一件拍品。</li>
             </ol>
             <p class="revision-purpose">我希望玩家有时间考虑要不要跟价，也能提前知道这一轮快结束了。</p>
+            <details class="revision-reason disclosure" id="timing-config">
+              <summary class="text-toggle"><span class="toggle-label">游戏里的计时配置</span><span class="chevron" aria-hidden="true">&gt;</span></summary>
+              <div class="detail-copy">
+                <p>游戏开局时会读取 UE 数据资产 <code>DA_Timing</code>。其中 <code>AuctionPreviewSeconds</code> 控制展示拍品的时间，<code>AuctionCallSeconds</code> 控制拍卖师每次询价后等多久。</p>
+                <p>Mac r142 试玩包运行时读到的两个值分别是 8 秒和 3 秒。这对应视频里先看拍品，再听拍卖师逐次询价的两个环节。</p>
+              </div>
+            </details>
           </div>
         </div>
         <p class="reference-note" id="auction-pacing-references">注：现场拍卖流程参考了<a href="https://help.sothebys.com/en/support/solutions/articles/44002297462-how-can-i-bid-in-an-auction-" target="_blank" rel="noopener noreferrer" aria-label="苏富比官方竞拍指南（新标签页打开）">苏富比的竞拍指南</a>和<a href="https://www.christies.com/en/help/frequently-asked-questions" target="_blank" rel="noopener noreferrer" aria-label="佳士得官方常见问题（新标签页打开）">佳士得的常见问题</a>。具体时长和三次提醒是按游戏需要设置的。</p>

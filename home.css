@@ -85,6 +85,59 @@
 .download-guide strong { color: var(--paper); font-weight: 500; }
 .download-guide a { color: var(--gold); text-underline-offset: 4px; }
 .project-progress .download-test-note { color: var(--muted); }
+.project-index {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0 36px;
+  border-block: 1px solid var(--line);
+}
+.project-index a, .work-links a, .progress-link {
+  color: var(--gold);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 5px;
+}
+.project-index a {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 10px;
+  padding: 12px 0;
+  text-decoration: none;
+}
+.project-index strong { font-size: 16px; font-weight: 600; }
+.project-index span { color: var(--muted); font-size: 13px; }
+.project-index a:hover strong { text-decoration: underline; text-underline-offset: 5px; }
+.work-links { display: flex; flex-wrap: wrap; gap: 0 20px; margin-top: 16px; }
+.work-links a { display: inline-flex; align-items: center; min-height: 44px; font-size: 15px; }
+.work-links a:hover, .progress-link:hover { color: var(--paper); }
+.work-links a:focus-visible, .project-index a:focus-visible, .progress-link:focus-visible {
+  outline: 2px solid var(--gold); outline-offset: 4px;
+}
+.project-progress .download-meta { white-space: normal; }
+.jam-project {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr);
+  grid-template-areas: "heading film" "copy film";
+  grid-template-rows: max-content 1fr;
+  align-items: start;
+  gap: 16px 54px;
+  margin-top: 48px;
+  padding-top: 36px;
+  border-top: 1px solid var(--line);
+}
+.jam-project h2 { grid-area: heading; margin: 0; font-size: 30px; font-weight: 600; line-height: 1.4; }
+.jam-subtitle { display: block; font-size: .7em; font-weight: 500; letter-spacing: 0; }
+.jam-film { grid-area: film; min-width: 0; margin: 0; }
+.jam-film video { display: block; width: 100%; height: auto; background: #101714; aspect-ratio: 16 / 9; }
+.jam-film figcaption { margin-top: 10px; color: var(--muted); font-size: 13px; line-height: 1.7; }
+@container portfolio (max-width: 680px) {
+  .jam-project { grid-template-columns: minmax(0, 1fr); grid-template-areas: "heading" "film" "copy"; grid-template-rows: auto; gap: 20px; }
+}
+@media (max-width: 560px) {
+  .project-index { justify-content: start; gap: 0 24px; }
+  .project-index a { flex-direction: column; gap: 3px; }
+}
 @container portfolio (min-width: 561px) and (max-width: 760px) {
   .download-options { grid-template-columns: minmax(0, 1fr); gap: 6px; }
 }
