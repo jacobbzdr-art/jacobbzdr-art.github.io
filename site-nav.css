@@ -1,32 +1,38 @@
 /* A shared reading directory; the game and the designer's writing stay central. */
-.has-site-nav { --directory-space: 192px; padding-right: var(--directory-space); }
+.has-site-nav { --directory-space: 208px; padding-right: var(--directory-space); }
 .has-site-nav > .page {
   width: min(1100px, calc(100% - 72px));
   container: portfolio / inline-size;
 }
 .site-directory {
   position: fixed; z-index: 20; top: 50%; right: 20px;
-  width: 152px; transform: translateY(-50%);
+  width: 174px; transform: translateY(-50%);
 }
 .directory-nav {
   max-height: calc(100svh - 48px); overflow-y: auto;
-  padding: 4px 0 4px 16px; border-left: 1px solid rgb(220 231 224 / 28%);
+  padding: 5px 6px;
   scrollbar-width: thin; scrollbar-color: var(--gold) transparent;
 }
 .directory-nav ul { margin: 0; padding: 0; list-style: none; }
-.directory-nav > ul > li + li { margin-top: 20px; }
-.directory-nav .directory-children { padding-left: 12px; margin-top: 4px; }
+.directory-nav .directory-projects { margin-top: 14px; }
+.directory-projects > li + li { margin-top: 22px; }
+.directory-nav .directory-pages {
+  margin: 3px 0 0 3px; padding-left: 12px;
+  border-left: 1px solid rgb(220 231 224 / 30%);
+}
+.directory-nav .directory-sections { margin: 1px 0 5px; padding-left: 12px; }
 .directory-link {
-  display: flex; align-items: center; min-height: 36px; padding: 7px 2px;
-  color: var(--soft-paper); font-size: 15px; font-weight: 500; line-height: 1.55;
+  display: flex; align-items: center; min-height: 34px; padding: 5px 2px;
+  color: var(--soft-paper); font-size: 14px; font-weight: 400; line-height: 1.55;
   text-decoration: none; text-underline-offset: 6px; text-decoration-thickness: 1px;
 }
-.directory-children .directory-link {
-  min-height: 34px; font-size: 13px; font-weight: 400;
+.directory-home, .directory-sections .directory-link {
+  min-height: 30px; font-size: 13px;
   color: var(--muted, #c4d6cc);
 }
+.directory-project-title { color: var(--paper); font-size: 17px; font-weight: 650; }
 .directory-link.is-current-page { color: var(--paper); font-weight: 600; }
-.directory-link.is-current { color: var(--gold); text-decoration-line: underline; }
+.directory-link[aria-current] { color: var(--gold); text-decoration-line: underline; }
 .directory-link:hover { color: var(--paper); text-decoration-line: underline; }
 .directory-link:focus-visible, .directory-toggle:focus-visible {
   outline: 2px solid var(--gold); outline-offset: 3px;
@@ -40,9 +46,8 @@
 @media (min-width: 768px) and (max-width: 1050px) {
   .has-site-nav { --directory-space: 176px; }
   .has-site-nav > .page { width: calc(100% - 48px); }
-  .site-directory { width: 140px; right: 16px; }
-  .directory-nav { padding-left: 12px; }
-  .directory-link { font-size: 14px; }
+  .site-directory { width: 150px; right: 12px; }
+  .directory-nav .directory-pages { padding-left: 10px; }
 }
 
 /* Reflow against the space left for the article, not the full screen width. */
@@ -66,7 +71,7 @@
 @container portfolio (max-width: 560px) {
   .home-page .game {
     grid-template-columns: minmax(0, 1fr); grid-template-rows: auto;
-    grid-template-areas: "cover" "copy" "progress"; gap: 28px; margin-top: 28px;
+    grid-template-areas: "cover" "copy" "download"; gap: 28px; margin-top: 28px;
   }
 }
 @container portfolio (max-width: 620px) {
@@ -105,10 +110,9 @@
     border-radius: 12px; background: #1b3c37; overscroll-behavior: contain;
   }
   .nav-ready .site-directory.is-open .directory-nav { display: block; }
-  .directory-nav > ul > li + li { margin-top: 12px; }
-  .directory-link, .directory-children .directory-link { min-height: 44px; }
-  .directory-link { font-size: 15px; }
-  .directory-children .directory-link { font-size: 14px; }
+  .directory-nav .directory-projects { margin-top: 8px; }
+  .directory-projects > li + li { margin-top: 14px; }
+  .directory-link, .directory-sections .directory-link { min-height: 44px; }
 }
 @media (max-width: 430px) {
   .has-site-nav .featured-case > summary { grid-template-columns: minmax(0, 1fr) 92px 12px; gap: 12px; }

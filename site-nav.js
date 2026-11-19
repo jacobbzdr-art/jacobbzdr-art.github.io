@@ -27,7 +27,6 @@
   function markCurrent(active) {
     links.forEach((link) => {
       const current = link === active;
-      link.classList.toggle("is-current", current);
       if (current) link.setAttribute("aria-current", link.dataset.navTarget ? "location" : "page");
       else link.removeAttribute("aria-current");
     });
@@ -80,13 +79,17 @@
 
   toggle.addEventListener("click", () => setMenu(toggle.getAttribute("aria-expanded") !== "true"));
   nav.addEventListener("click", (event) => {
-    const link = event.target.closest("a[data-nav-page]");
+    const link = event.target.closest("a[href]");
     if (!link || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
     const url = new URL(link.href);
     setMenu(false);
-    if (url.pathname !== window.location.pathname) return;
+    if (url.origin !== window.location.origin || link.dataset.navPage !== page) return;
     event.preventDefault();
-    if (url.href !== window.location.href) history.pushState(null, "", url.href);
+    if (url.hash !== window.location.hash) {
+      const currentUrl = new URL(window.location.href);
+      currentUrl.hash = url.hash;
+      history.pushState(null, "", currentUrl);
+    }
     followHash(url.hash, event.detail === 0);
   });
   document.addEventListener("click", (event) => {
